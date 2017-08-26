@@ -1,0 +1,60 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include Blocks/head/head
+
+//----------- Please choose header the one you like ------------\\
+include Blocks/header/variant1/header-v1
+//- include Blocks/header/variant2/header-v2
+//- include Blocks/header/variant3/header-v3
+//- include Blocks/header/variant4/header-v4
+
+include Blocks/footer/footer
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "Arial shop",
+				"author": "Denisoed",
+				"description": "Magazin"
+			})
+			
+		+b.BODY
+			+e.DIV.wrap
+				block header
+					+searchModal()
+					+backTop()
+					+preloader()
+
+					//----------- Please uncomment the header you selected ------------\\
+					+header-v1() 
+					//- +header-v2() 
+					//- +header-v3() 
+					//- +header-v4() 
+					
+				block content
+
+				block footer
+					+footer()
+
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js" )
+				script( src="libs/jquery-ui/jquery-ui.min.js" )
+				script( src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" )
+				script( src="libs/owl.carousel/dist/owl.carousel.min.js" )
+				script( src="libs/jquery.mixitup/jquery.mixitup.min.js" )
+				script( src="libs/jquery.sticky/jquery.sticky.js" )
+				script( src="libs/fotorama/fotorama.js" )
+				script( src="libs/jquery.rateyo/jquery.rateyo.min.js" )
+				script( src="libs/FlipClock/flipclock.min.js" )
+				// endbuild
+				script( src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-VAPLiH0Yb_wqRN7yiT_lvHljLQfNG8Q&callback=initMap" async defer )
+
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

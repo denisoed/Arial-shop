@@ -1,0 +1,11 @@
+extends template
+
+include Blocks/Pages/Home/home-v1/new-items/new-items
+include Blocks/Pages/Cart/cart
+include Blocks/shortcodes/shortcodes
+
+block content
+  +main-banner("background-image: url('img/cart-banner/cart.jpeg')", 'Cart', 'Lorem ipsum dolor sit amet, consectetur')
+  +newItems()
+  +cart()
+  +subscribe()

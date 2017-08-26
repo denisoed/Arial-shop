@@ -1,0 +1,28 @@
+mixin home-collections()
+  +b.SECTION.home-collections
+    +e.DIV.container
+
+      //- Blocks
+      +e.DIV.blocks
+
+        +b.DIV.home-collections-block(class="block1", style="background-image: url('img/home-collection/home-coll-accessories.jpeg')")
+          +e.H2 Accessories
+          +e.P 2 buy get up to 50 % off
+          +main-btn('Shop now!')
+        +b.DIV.home-collections-block(class="block2", style="background-image: url('img/home-collection/home-coll-man.jpeg')")
+          +e.H2 Man's
+          +e.P New collection for the 2017
+          +main-btn('Shop now!')
+
+      //- Blocks
+      +e.DIV.blocks
+
+        +b.DIV.home-collections-block(class="block3", style="background-image: url('img/home-collection/home-coll-woman.jpeg')")
+          +e.H2 Woman's
+          +e.P New collection for the 2017
+          +main-btn('Shop now!')
+        +b.DIV.home-collections-block(class="block4", style="background-image: url('img/home-collection/home-coll-bag.jpeg')")
+          +e.H2 Bag's
+          +e.P 2 buy get up to 50 % off
+          +main-btn('Shop now!')
+  

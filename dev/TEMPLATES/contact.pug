@@ -1,0 +1,10 @@
+extends template
+
+include Blocks/Pages/Contact/send-us/send-us
+include Blocks/shortcodes/shortcodes
+
+block content
+  +main-banner("background-image: url('img/contact-banner/contact-banner.jpeg')", 'Contact Us', 'Lorem ipsum dolor sit amet, consectetur')
+  +google-map()
+  +send-us()
+  +subscribe()

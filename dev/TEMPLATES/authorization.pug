@@ -1,0 +1,8 @@
+extends template
+
+include Blocks/Pages/Auth/authorization/authorization
+include Blocks/shortcodes/shortcodes
+
+block content
+  +authorization()
+  +subscribe()

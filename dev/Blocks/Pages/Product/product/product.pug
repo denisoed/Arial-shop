@@ -1,0 +1,57 @@
+mixin product()
+  +b.SECTION.product-detail
+    +e.DIV.container
+      +b.DIV.product-detail-fotorama(class="fotorama", data-maxwidth="100%", data-allowfullscreen="true", data-nav="thumbs", data-thumbwidth="120", data-thumbheight="70", data-thumbmargin="15")
+        +e.IMG(src="img/product-detail/product1.jpeg")
+        +e.IMG(src="img/product-detail/product2.jpeg")
+        +e.IMG(src="img/product-detail/product3.jpeg")
+        +e.IMG(src="img/product-detail/product4.jpg")
+      +b.DIV.product-detail-info
+        p(class="product-item__newOrSale") Sale
+        +e.H3 Name item
+        +e.DIV.price #[span $130.00] $100.00 
+        +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        +e.DIV.f-group
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-color")
+            +e.P.title Color:
+            +e.BUTTON.btn Blue
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-color the-modal")
+              +e.LI
+                +e.A(href="#") Blue
+              +e.LI
+                +e.A(href="#") Red
+              +e.LI
+                +e.A(href="#") Pink    
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-size")
+            +e.P.title Size:
+            +e.BUTTON.btn X
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-size the-modal")
+              +e.LI
+                +e.A(href="#") X
+              +e.LI
+                +e.A(href="#") XL
+              +e.LI
+                +e.A(href="#") XXL   
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-type")
+            +e.P.title Type:
+            +e.BUTTON.btn Fabric
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-type the-modal")
+              +e.LI
+                +e.A(href="#") Fabric
+              +e.LI
+                +e.A(href="#") Coton
+              +e.LI
+                +e.A(href="#") Slick 
+        +b.DIV.product-detail-add-wishlist
+          +btnWithIcon("Add wishlist", "icon-heart")
+          +b.DIV.product-detail-quantity
+            +e.INPUT(type="number" min="1" max="9" step="1" value="1")
+        +main-btn("Add to cart")    
+
+

@@ -1,0 +1,36 @@
+mixin blog-list()
+  +b.SECTION.products
+    +e.DIV.container
+        +b.DIV.products-title 
+            +e.H3.title Lorem #[span &] Ipsum
+            +e.P.parag Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        +b.DIV.products-filter
+            +e.H5.title Filters
+            +e.DIV.element(class="price")
+                +e.H5 Sort by
+                +e.DIV.btns
+                    +e.BUTTON(data-sort="default") Default 
+                    +e.BUTTON(data-sort="popularity") Popularity 
+                    +e.BUTTON(data-sort="average-reting") Average reting
+                    +e.BUTTON(data-sort="newness") Newness  
+            +e.DIV.element(class="size")
+                +e.H5 Archives
+                +e.DIV.btns
+                    +e.BUTTON(data-archives="month") March 2017  
+                    +e.BUTTON(data-archives="month") April 2017  
+                    +e.BUTTON(data-archives="month") May 2017  
+                    +e.BUTTON(data-archives="month") Juny 2017  
+                    +e.BUTTON(data-archives="month") July 2017  
+            +e.DIV.element(class="color")
+                +e.H5 Tags
+                +e.DIV.btns
+                    +e.BUTTON(data-color="all") All
+                    +e.BUTTON(data-color="accessories") Accessories
+                    +e.BUTTON(data-color="jeans") Jeans
+                    +e.BUTTON(data-color="bags") Bags
+                    +e.BUTTON(data-color="chair") Chair
+                    +e.BUTTON(data-color="dresses") Dresses
+                    +e.BUTTON(data-color="outerwear") Outerwear
+                    +e.BUTTON(data-color="shirts") Shirts
+                    +e.BUTTON(data-color="lingerie") Lingerie
+        +galleryPosts('blog-list-filter__btn', 'blog-list-item')

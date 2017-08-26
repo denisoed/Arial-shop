@@ -1,0 +1,156 @@
+.authorization
+  margin: 50px 0
+  &__container
+    +container()
+  &-login
+    +col(6)
+    display: flex
+    justify-content: center
+    &__form
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      max-width: 400px
+      input
+        width: 100%
+        border: none
+        background-color: transparent
+        padding: 8px 40px
+        border: 2px solid $grey
+        margin-bottom: 20px
+        font-size: 16px
+        font-family: $berlinFBSamibold
+        color: $dark
+        box-sizing: border-box
+    &__email
+      width: 100%
+      &::before
+        content: '\e903'
+        font-family: 'icons'
+        color: $text-color
+        position: absolute
+        font-size: 16px
+        font-weight: bold
+        padding: 12px
+
+    &__password
+      width: 100%
+      &::before
+        content: '\e907'
+        font-family: 'icons'
+        color: $text-color
+        position: absolute
+        font-size: 16px
+        font-weight: bold
+        padding: 12px        
+    &__btn_checkbox
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 30px
+      label
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+        width: 150px
+        padding: 5px 0
+        font-family: $Montserrat-Bold
+        font-size: 14px
+        cursor: pointer
+        transition: .3s ease
+        input
+          width: 18px
+          margin: 0
+          margin-right: 8px
+        &:hover
+          color: $accent
+    &__forget
+      font-family: $Montserrat-Bold
+      font-size: 14px
+      color: $dark
+      transition: .3s ease
+      &:hover
+        color: $accent
+    &__login-with
+      max-width: 400px
+      height: 100px
+      display: flex
+      flex-direction: column
+      align-items: center    
+      justify-content: space-around
+      padding-top: 15px
+      border-top: 1px solid $grey
+      h4
+        color: $accent
+        font-size: 24px
+        font-family: $berlinFBSamibold
+      .fa-facebook
+        background-color: #3C5B9A  
+      .fa-vk
+        background-color: #5E82AA  
+      .fa-twitter
+        background-color: #32CDFD  
+      .fa-instagram
+        background-color: #AB429E  
+      .fa-google-plus
+        background-color: #DC4A38  
+    &__icon
+      color: $white
+      padding: 12px
+      margin: 0 6px    
+  &-register
+    +col(6)
+    display: flex
+    justify-content: center
+    &__form
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 300px
+      input
+        width: 100%
+        border: none
+        background-color: transparent
+        padding: 8px 40px
+        border: 2px solid $grey
+        margin-bottom: 20px
+        font-size: 16px
+        font-family: $berlinFBSamibold
+        color: $dark
+        box-sizing: border-box
+      .main-btn
+        width: 100%
+        box-sizing: border-box  
+    &__name
+      width: 100%
+      &::before
+        content: '\e90d'
+        font-family: 'icons'
+        color: $text-color
+        position: absolute
+        font-size: 16px
+        font-weight: bold
+        padding: 12px
+
+    &__email
+      width: 100%
+      &::before
+        content: '\e903'
+        font-family: 'icons'
+        color: $text-color
+        position: absolute
+        font-size: 16px
+        font-weight: bold
+        padding: 12px
+
+    &__password
+      width: 100%
+      &::before
+        content: '\e907'
+        font-family: 'icons'
+        color: $text-color
+        position: absolute
+        font-size: 16px
+        font-weight: bold
+        padding: 12px 

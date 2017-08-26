@@ -1,0 +1,270 @@
+mixin main-menu(data) 
+  +b.DIV.main-menu(class="fixed-menu")
+    +e.DIV.container
+    
+      +b.DIV.main-menu-logotype
+        +e.A.text(href="/") Arial> 
+        
+      +e.DIV.search-and-nav
+        +b.FORM.main-menu-search
+
+          +b.DIV.top-line-select(class="category")
+            +e.P.title
+            +e.DIV.btn All categories
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-category the-modal")
+              +e.LI
+                +e.A(href="#") All categories
+              +e.LI
+                +e.A(href="#") Clothes
+              +e.LI
+                +e.A(href="#") Shoes
+
+          +e.INPUT(type="text", placeholder="Search entire store here...") 
+          +e.BUTTON.submit(type="submit")
+            +e.SPAN.btn-icon(class="icon-search")
+            
+        +b.NAV.main-menu-navbar
+          +e.UL.links
+
+            +e.LI.li
+              +e.A.link(href="#") Home 
+
+            +e.LI.li
+              +e.A.link(href="#") Man
+
+              //- Dropdown
+              +b.UL.main-menu-navbar-dropdown
+                +e.LI.container
+
+                  +e.IMG.image(src='img/dropdown/dropdown2.jpeg')
+                  +e.UL.column
+                    +e.Li
+                      +e.H6 News
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") New Clothing 
+                        +e.LI
+                          +e.A(href="#") New Shoes
+                        +e.LI
+                          +e.A(href="#") New Bags 
+                        +e.LI
+                          +e.A(href="#") New Outerwear 
+                        +e.LI
+                          +e.A(href="#") New Accessories 
+                    +e.Li
+                      +e.H6 Clothing
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Jeans
+                        +e.LI
+                          +e.A(href="#") Winter Jackets
+                        +e.LI
+                          +e.A(href="#") Formal Shirts
+                        +e.LI
+                          +e.A(href="#") Suits & Blazers
+                        +e.LI
+                          +e.A(href="#") Track wear
+                    +e.Li
+                      +e.H6 Accessories
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Mens Jewellery
+                        +e.LI
+                          +e.A(href="#") Bag
+                        +e.LI
+                          +e.A(href="#") Sunglasses
+                        +e.LI
+                          +e.A(href="#") Watches
+                        +e.LI
+                          +e.A(href="#") Hair Care
+                        +e.LI
+                          +e.A(href="#") Ties & Cufflinks
+
+
+            +e.LI.li
+              +e.A.link(href="#") Women
+
+              //- Dropdown
+              +b.UL.main-menu-navbar-dropdown
+                +e.LI.container
+
+                  +e.UL.column
+                    +e.Li
+                      +e.H6 News
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") New Clothing 
+                        +e.LI
+                          +e.A(href="#") New Shoes
+                        +e.LI
+                          +e.A(href="#") New Bags 
+                        +e.LI
+                          +e.A(href="#") New Outerwear 
+                        +e.LI
+                          +e.A(href="#") New Accessories 
+                    +e.Li
+                      +e.H6 Clothing
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Jeans
+                        +e.LI
+                          +e.A(href="#") Winter Jackets
+                        +e.LI
+                          +e.A(href="#") Formal Shirts
+                        +e.LI
+                          +e.A(href="#") Suits & Blazers
+                        +e.LI
+                          +e.A(href="#") Track wear
+                    +e.Li
+                      +e.H6 Accessories
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Mens Jewellery
+                        +e.LI
+                          +e.A(href="#") Bag
+                        +e.LI
+                          +e.A(href="#") Sunglasses
+                        +e.LI
+                          +e.A(href="#") Watches
+                        +e.LI
+                          +e.A(href="#") Hair Care
+                        +e.LI
+                          +e.A(href="#") Ties & Cufflinks
+
+                  +e.IMG.image(src='img/dropdown/dropdown1.jpeg')
+
+            +e.LI.li
+              +e.A.link(href="#") Other
+
+              //- Dropdown
+              +b.UL.main-menu-navbar-dropdown
+                +e.LI.container
+
+                  +e.IMG.image(src='img/dropdown/dropdown2.jpeg')
+                  +e.UL.column
+                    +e.Li
+                      +e.H6 News
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") New Clothing 
+                        +e.LI
+                          +e.A(href="#") New Shoes
+                        +e.LI
+                          +e.A(href="#") New Bags 
+                        +e.LI
+                          +e.A(href="#") New Outerwear 
+                        +e.LI
+                          +e.A(href="#") New Accessories 
+                    +e.Li
+                      +e.H6 Clothing
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Jeans
+                        +e.LI
+                          +e.A(href="#") Winter Jackets
+                        +e.LI
+                          +e.A(href="#") Formal Shirts
+                        +e.LI
+                          +e.A(href="#") Suits & Blazers
+                        +e.LI
+                          +e.A(href="#") Track wear
+                    +e.Li
+                      +e.H6 Accessories
+                      +e.UL
+                        +e.LI
+                          +e.A(href="#") Mens Jewellery
+                        +e.LI
+                          +e.A(href="#") Bag
+                        +e.LI
+                          +e.A(href="#") Sunglasses
+                        +e.LI
+                          +e.A(href="#") Watches
+                        +e.LI
+                          +e.A(href="#") Hair Care
+                        +e.LI
+                          +e.A(href="#") Ties & Cufflinks
+
+      +e.DIV.features
+
+        // Search button (The button appears on the screen width of 992)
+        +b.DIV.main-menu-search-btn
+          +e.SPAN.icon(class="icon-search")
+
+        // Wishlist modal menu  
+        +b.DIV.main-menu-wishlist
+          +e.SPAN.icon(class="icon-heart")
+            +e.DIV.quantity-item 3
+
+          +b.DIV.main-menu-option.opt-wishlist(class="the-modal")
+            +e.DIV.opt-title Wishlist
+            
+            //- Item
+            +b.DIV.main-menu-option-item(class="main-menu-option__wishlist")
+              +e.DIV.wishlist-info
+                +e.IMG.image(src="img/products/shoes.jpeg", alt="Cart item image")
+                +e.DIV.name_and_price
+                  +e.A.name(href="#") lorem ipsum
+                  +e.SPAN.price $100.00
+                  +e.SPAN.qty qty: #[span 1]
+              +e.DIV.btns  
+                +main-btn('Add cart')
+                +e.SPAN.icon(class="icon-trash")
+            
+            //- Item
+            +b.DIV.main-menu-option-item(class="main-menu-option__wishlist")
+              +e.DIV.wishlist-info
+                +e.IMG.image(src="img/products/shoes.jpeg", alt="Cart item image")
+                +e.DIV.name_and_price
+                  +e.A.name(href="#") lorem ipsum
+                  +e.SPAN.price $100.00
+                  +e.SPAN.qty qty: #[span 2]
+              +e.DIV.btns  
+                +main-btn('Add cart')
+                +e.SPAN.icon(class="icon-trash")
+
+        // Cart modal menu  
+        +b.DIV.main-menu-cart
+          +e.DIV.content
+            +e.SPAN.icon(class="icon-cart")
+              +e.DIV.quantity-item 8
+            +e.SPAN.price Your cart: <br> #[span $ 300.00]    
+          
+          +b.DIV.main-menu-option.opt-cart(class="the-modal")
+            +e.DIV.opt-title #[span 8] items in your cart
+            
+            //- Item
+            +b.DIV.main-menu-option-item
+              +e.IMG.image(src="img/products/shoes.jpeg", alt="Cart item image")
+              +e.DIV.name_and_price
+                +e.A.name(href="#") lorem ipsum
+                +e.SPAN.price $100.00
+                +e.SPAN.qty qty: #[span 5]
+              +e.SPAN.icon(class="icon-trash")
+            //- Item
+            +b.DIV.main-menu-option-item
+              +e.IMG.image(src="img/products/shoes.jpeg", alt="Cart item image")
+              +e.DIV.name_and_price
+                +e.A.name(href="#") lorem ipsum
+                +e.SPAN.price $100.00
+                +e.SPAN.qty qty: #[span 1]
+              +e.SPAN.icon(class="icon-trash")
+            //- Item
+            +b.DIV.main-menu-option-item
+              +e.IMG.image(src="img/products/shoes.jpeg", alt="Cart item image")
+              +e.DIV.name_and_price
+                +e.A.name(href="#") lorem ipsum
+                +e.SPAN.price $100.00
+                +e.SPAN.qty qty: #[span 2]
+              +e.SPAN.icon(class="icon-trash")
+                
+            +e.DIV.features   
+              +e.SPAN.total Total: #[span $800.00]
+              +e.DIV.btns
+                +main-btn('View cart')
+                +main-btn('Checkout')
+
+    //--Responsive toggle button(The button appears on the screen width of 992)--\\          
+    +b.DIV.main-menu-bars
+        +e.SPAN Menu
+        +e.I.icon(class="fa fa-bars")

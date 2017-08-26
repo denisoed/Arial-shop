@@ -1,0 +1,657 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	//------------ Top line ---------------\\
+	.top-line
+		padding: 8px 0				
+		&__container
+			display: flex
+			justify-content: center
+		&-select
+			margin: 8px 15px
+			&::after
+				display: none
+			&__btn
+				color: $accent
+
+	.top-line-v3
+		.top-line__container
+			padding: 15px 0
+		.main-menu-logotype
+			margin: 0
+			margin-right: 50px
+	//------------ User menu ---------------\\
+	.user-menu
+		&__content
+			margin: 8px 15px
+			p
+				color: $accent
+				
+	//----------- Main menu --------------\\							
+	.main-menu
+		border-bottom: none
+		&__search-and-nav
+			align-items: flex-start
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			padding: 15px 10% 
+			margin: 0
+			box-sizing: border-box
+			display: none
+			z-index: 3
+			background-color: $white
+		&-search		
+			display: none
+		&-option
+			top: 50px
+			&::before
+				display: none
+		.user-menu-option
+			top: 40px
+			&::before
+				display: none
+		&-navbar
+			&__links
+				flex-direction: column
+			&__link
+				display: block
+				line-height: 1
+			&__li
+				border: 1px solid $dark
+				margin-bottom: 12px
+				position: relative 
+				&:hover	
+					.tringle
+						&::after
+							display: none
+				.tringleMobile
+					&::before
+						display: block
+
+			&-dropdown
+				border-right: 1px solid $white
+				border-left: 1px solid $white
+				left: -1px
+				box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5)
+				display: none
+				opacity: 1
+				visibility: visible
+				&__image
+					display: none
+				&__column
+					flex-direction: column
+		&-search-btn
+    	display: block
+		&-bars
+			display: flex	
+			justify-content: space-between
+
+	.main-menu-v2
+		.main-menu__search-and-nav
+    	+col(12)
+		.user-menu
+			background-color: $white
+
+	.main-menu-v3
+		.main-menu__search-and-nav
+    	+col(12)
+		.main-menu__features
+			margin: 0 auto
+			justify-content: center
+		.user-menu
+			background-color: $accent 
+		.main-menu-search-btn
+    	display: block
+		.main-menu-search-btn__icon
+			color: $white
+		.main-menu-cart__content
+			margin-top: 15px
+		.main-menu-navbar__link
+			color: $text-color	
+	//------------ Top line v4---------------\\
+	.top-line-v4
+		position: static							
+	//--------------- Home slider -------------\\
+	.home-slider
+		&-slide
+			h1
+				font-size: 82px
+			p
+				font-size: 42px
+				span
+					font-size: 52px
+
+	//--------- Services ----------\\				
+	.services
+		&__container
+			flex-direction: column
+			align-items: center
+		&__icon
+			font-size: 38px
+		&__item
+			width: 80%
+			margin: 6px 0
+			justify-content: space-around
+			height: 80px
+			&::before
+				border-width: 30px 0 30px 20px
+			&::after
+				border-width: 30px 0 30px 20px
+				right: -20px
+
+
+	//----------Products ---------------\\
+	.products
+		&-filter
+			+col(12)
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+			&__element
+				flex-basis: 100%
+			&__btns
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				button
+					&:hover
+						padding-left: 5px
+			.color			
+				button
+					&:hover
+						padding-left: 25px
+			&__title
+				width: 100%
+				text-align: center
+	//---------- Subscribe ------------\\				
+	.subscribe
+		&__content
+			flex-direction: column
+			padding: 30px 0
+			padding: 15px
+		&-form
+			width: 80%
+
+	//--------- Banners ---------------\\
+	.bannerItem
+		width: 100%
+		margin: 8px 0
+	.banners
+		&__content
+			flex-direction: column
+
+	//---------- Footer ----------\\
+	.footer
+		&__top-line
+			flex-direction: column
+		&__about
+			width: 100%
+		&__links
+			margin-top: 30px
+			width: 100%
+			justify-content: space-around
+
+	//--------- Product item -----------\\
+	.product-item
+		&__image
+			button
+				opacity: 1
+				padding: 8px 12px
+			a
+				opacity: 1
+				padding: 8px 12px
+			&::before
+				opacity: 1
+				width: 80%
+				height: 80%	
+				background-color: rgba($white, 0.2)
+
+	//----------------- About team ------------\\ 
+	.about-team
+		&__info
+			+col(12)
+			margin-bottom: 30px
+		&__image	
+			+col(12)
+
+	//----------------- Facts ------------\\ 
+	.facts
+		&-info
+			+col(12)
+		&-item
+			+col(12)
+			margin-bottom: 30px
+
+	//------------- Comments -------------\\
+	.comments-block
+		+col(12)		
+
+	//------------- Gallery item ----------------\\
+	.gallery
+		+col(12)
+		&-filter-btns
+			border: 1px solid $grey
+			justify-content: center
+			display: flex
+			flex-wrap: wrap
+			button
+				margin: 8px
+		&-items
+			.product-item
+				width: 100%
+			.blogItem	
+				width: 100%
+				margin-bottom: 30px
+	//-------------- Right block --------\\
+	.right-block
+		.show-right-block
+			top: 5%
+			transform: translateY(-50%)	
+
+	//---------------- View detail -----------\\
+	.view-detail
+		overflow-y: auto
+		&__content
+			padding: 30px 0
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
+		&__features
+			width: 80%
+		&__image
+			width: 80%
+			margin: 0
+			margin-bottom: 15px
+			min-height: 500px
+	//---------------Shop banner-----------\\
+	.shop-banner
+		width: 100%
+		&::before
+			width: 90%
+			height: 90%	
+
+	//------------- Slider price -----------\\
+	.products-list 
+		.products-filter 
+			#slider-price
+				width: 100%			
+
+	//---------- Collection detail -----------\\
+	.collection-item				
+		&-box-title
+			+col(12)
+		&-box-item
+			+col(12)
+			display: flex
+			flex-direction: column
+	//------------------ Product item 2 ------------------\\      
+	.product-item2
+		flex-direction: column
+		&__image
+			margin-bottom: 30px
+			margin-right: 0
+			button
+				opacity: 1
+				padding: 8px 12px
+			a
+				opacity: 1
+				padding: 8px 12px
+			&::before
+				opacity: 1
+				width: 80%
+				height: 80%	
+				background-color: rgba($white, 0.2)
+		&__mini-Images
+			justify-content: center
+			width: 100%
+			flex-wrap: wrap
+		&__mini-image
+			margin-top: 15px
+
+	//-------------- More-products --------------\\
+	.more-products
+		&__content
+			.product-item	
+				width: 49%	
+	//----------------- Main menu v4 ---------------\\						 	
+	.main-menu-v4
+		top: 0
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	//----------------- Deal of the day -----------------\\
+	.deal
+		&__clock
+			display: flex
+			flex-direction: column
+			align-items: center
+			.flip-clock-divider
+				transform: rotate(90deg)
+				.flip-clock-label
+					right: -170px
+					font-size: 22px
+
+	//-------------- More-products --------------\\
+	.more-products
+		&__content
+			.product-item	
+				width: 100%	
+
+	//---------------- View detail -----------\\
+	.view-detail
+		&__f-group
+			width: 100%
+			flex-direction: column
+			align-items: flex-start
+			.btn-with-icon
+				margin-bottom: 15px
+			.top-line-select-elements
+				right: 50%
+				transform: translateX(50%)	
+	//------------ Tol line ------------\\
+	.top-line
+		&__contact-us
+			display: none
+	//------------ User menu ---------------\\					
+	.user-menu
+		background-color: $accent
+		p
+			color: $white
+		&:hover
+			.user-menu__name
+				color: $white	
+		&-option
+			&::before
+				display: none	
+
+	//-------- Home Slider ------------\\
+	.home-slider
+		&-slide
+			h1
+				font-size: 72px
+			p
+				font-size: 32px
+				span
+					font-size: 42px
+	//--------- Products --------------\\
+	.gallery
+		.gallery-items
+			width: 100%	
+
+	//------------- Footer ------------\\
+	.footer
+		&__links
+			flex-direction: column
+			align-items: flex-start
+		&-menu
+			margin-bottom: 30px
+			h5
+				margin-bottom: 15px
+		&-address
+			h5
+				display: flex
+				margin-bottom: 15px
+
+	//---------- Home collections ------------\\ 			
+	.home-collections
+		&__container
+			flex-direction: column
+		&__blocks
+			width: 100%
+
+	//--------------- Main banner ---------------\\
+	.main-banner
+		&__container
+			h1
+				font-size: 52px
+			p
+				font-size: 26px	
+
+	//---------- Send us --------------\\
+	.send-us
+		&__form_and_info
+			flex-direction: column
+		&-form
+			align-items: center
+			+col(12)
+
+	//-------------	Product detail -------------\\
+	.product-detail
+		&-fotorama
+			+col(12)
+			width: 100%
+			display: flex
+			justify-content: center
+			margin-bottom: 30px
+		&-info				
+			+col(12)
+
+	//-------------- Auth --------------\\
+	.authorization
+		&-login		
+			+col(12)
+			margin-bottom: 25px
+			&__login-with
+				padding-bottom: 30px
+				border-bottom: 1px solid $grey
+			&__btn_checkbox
+				flex-direction: column
+				align-items: flex-start
+				.main-btn
+					width: 100%
+					margin-bottom: 15px
+					box-sizing: border-box
+				label
+					width: auto
+					margin-bottom: 15px
+		&-register
+			margin-top: 25px
+			+col(12)
+
+	//------------- Collection list --------------\\
+	.collections-list
+		&__content
+			column-count: 2
+
+	//-------------Checkout -----------\\
+	.checkout
+		&__details
+			+col(12)
+		&__order					
+			+col(12)
+		&-add-info	
+			+col(12)
+		&-payment  
+    	+col(12)
+	//------------- Home more products ------------\\
+	.m-products
+		&__lines
+			justify-content: center				
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	//------------------ Product item 2 ------------------\\      
+	.product-item2
+		&__mini-Images
+			flex-direction: column
+			align-items: center
+		&__mini-image
+			margin-right: 0
+	//---------- Center position for Options menu ------------\\ 			
+	.top-line
+		&-select
+			padding: 4px 8px		
+
+	//------------ User menu ---------------\\			
+	.user-menu
+		flex-basis: 100%
+		&__name
+			margin-right: auto
+		&-option
+			right: 50%
+			transform: translateX(50%)
+			&::before
+				display: none
+
+	//---------- Main menu ---------------\\	
+	.main-menu
+		&__container
+			flex-direction: column
+			margin: 15px 0
+		&-logotype
+			width: 100%
+			text-align: center
+			margin: 0
+		.opt-cart
+			right: 80%
+			transform: translateX(50%)
+		.opt-wishlist
+			right: -40%
+			transform: translateX(50%)
+		&-option
+			&::before
+				display: none
+		&__features
+			flex-wrap: wrap		
+
+	.main-menu-v2
+		.main-menu__features
+			margin-top: 15px
+			display: flex
+			justify-content: center
+			width: 100%	
+		.user-menu-option
+			right: 30px 	
+		.main-menu-cart
+			flex-basis: 80%
+		.main-menu-cart__content
+			width: 100%
+			justify-content: center
+			padding-right: 30px
+			box-sizing: border-box
+		.user-menu
+			flex-basis: 0
+	.main-menu-v3 
+		.user-menu-option
+			right: 30px 	
+	//--------------- Home slider -------------\\
+	.home-slider
+		&-slide
+			h1
+				font-size: 52px
+			p
+				font-size: 26px
+				span
+					font-size: 32px
+			&__info3
+				align-items: flex-start
+	//---------- Subscribe ------------\\				
+	.subscribe
+		&__content
+			flex-direction: column
+			padding: 15px
+			h4
+				font-size: 38px
+		&-form
+			align-self: flex-start
+			width: 100%
+			&__icon
+				font-size: 24px	
+
+	//-------------------- Search modal window-------------------- \\
+	.search-modal
+		&__form
+			input
+				font-size: 38px
+				&::-webkit-input-placeholder
+					font:
+						size: 28px
+
+				&:-moz-placeholder
+					font:
+						size: 28px
+
+				&::-moz-placeholder
+					font:
+						size: 28px
+
+				&:-ms-input-placeholder
+					font:
+						size: 28px
+			button
+				font-size: 28px	
+
+	//--------------- Main banner ---------------\\
+	.main-banner
+		&__container
+			h1
+				font-size: 42px
+			p
+				font-size: 18px
+
+	//---------- Send us --------------\\
+	.send-us
+		&-info-item
+			+col(12)
+			margin-top: 30px
+
+	//--------- Erroe 404 --------------\\
+	.error-404
+		h3
+			font-size: 26px
+		p
+			font-size: 120px
+
+	//------------- Collection list --------------\\
+	.collections-list
+		&__content
+			column-count: 1
+
+	.checkout
+		&-accordeon 
+			dt
+				flex-direction: column
+				span		
+					margin-left: 0
+					margin-top: 15px
+
+	// //------------- Home more products ------------\\
+	// .m-products
+	// 	&__lines
+	// 		justify-content: center				
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

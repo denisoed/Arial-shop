@@ -1,0 +1,58 @@
+mixin right-block()
+  +b.DIV.right-block(class="hideBlock")
+    +b.BUTTON.show-right-block
+
+    +e.DIV.container
+
+      //----------Logotype-----------\\
+      +b.DIV.main-menu-logotype
+        +e.A.text(href="/") Arial>
+
+      +b.DIV.right-block-desc
+        +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        +e.DIV.social-icons
+          +e.A(href="#")
+            +e.I.icon(class="fa fa-facebook")
+          +e.A(href="#")
+            +e.I.icon(class="fa fa-twitter")
+          +e.A(href="#")
+            +e.I.icon(class="fa fa-instagram")
+          +e.A(href="#")
+            +e.I.icon(class="fa fa-google-plus")
+          +e.A(href="#")
+            +e.I.icon(class="fa fa-youtube")  
+
+                
+      +e.DIV.features
+
+        //- Select a payment method
+        +b.DIV.right-block-select(class="payment")
+          +e.P.title Currency:
+          +e.BUTTON.btn Eur
+          +e.I.icon(class="fa fa-caret-down")
+          +b.UL.top-line-select-elements(class="opt-payment the-modal")
+            +e.LI
+              +e.A(href="#") Eur
+            +e.LI
+              +e.A(href="#") Rub
+            +e.LI
+              +e.A(href="#") Usd
+        
+        //- Select language
+        +b.DIV.right-block-select(class="language")
+          +e.P.title Language:
+          +e.BUTTON.btn English
+          +e.I.icon(class="fa fa-caret-down")
+          +b.UL.top-line-select-elements(class="opt-lang the-modal")
+            +e.LI
+              +e.A(href="#") English
+            +e.LI
+              +e.A(href="#") Russian
+
+      +e.DIV.contact-us
+        +b.DIV.top-line-phone
+          +e.SPAN.icon(class="icon-phone")
+          +e.P.number +999 888 777 666
+        +b.DIV.top-line-email
+          +e.SPAN.icon(class="icon-email")
+          +e.P.address example@example.com    

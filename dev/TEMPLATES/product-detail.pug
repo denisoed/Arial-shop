@@ -1,0 +1,13 @@
+extends template
+
+include Blocks/Pages/Product/product/product
+include Blocks/Pages/Product/product-features/product-features
+include Blocks/Pages/Product/product-related/product-related
+include Blocks/shortcodes/shortcodes
+
+block content
+  +viewDetail("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+  +product()
+  +subscribe()
+  +product-features()
+  +product-related()

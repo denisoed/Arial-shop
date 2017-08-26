@@ -1,0 +1,46 @@
+.main-menu-v3
+  background-color: $accent
+  border: none
+  .main-menu__search-and-nav
+    align-items: flex-start
+    +col(9)  
+  .main-menu-logotype
+    margin: 0  
+  .main-menu-option
+    &::before
+      border-color: transparent transparent $white
+  .main-menu-search-btn
+    display: none
+  .main-menu-navbar__link
+    color: $white
+  .main-menu-cart__price
+    color: $white  
+  .main-menu-navbar__li
+    &:hover
+  .user-menu__icon
+    color: $white
+  .user-menu-option
+    &::before
+      border-color: transparent transparent $white
+  .main-menu-wishlist__quantity-item
+    background-color: $dark  
+    z-index: 1    
+  .main-menu-wishlist__icon      
+    color: $white
+  .main-menu-cart
+    &:hover 
+      .main-menu-cart__icon
+        color: $white
+  .main-menu-cart__icon  
+    color: $white
+    .main-menu-cart__quantity-item
+      background-color: $dark
+    &:hover
+      color: $white 
+  .main-menu-navbar-dropdown
+    border-top: 3px solid $grey
+    top: 100% 
+  .tringle::after 
+    bottom: -15px
+    border-color: transparent transparent $grey
+

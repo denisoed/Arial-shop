@@ -1,0 +1,32 @@
+mixin send-us()
+  +b.SECTION.send-us
+    +e.DIV.container
+      +e.DI.title
+        +sectionTitle('Send us a message')
+      +e.DIV.form_and_info  
+        +b.FORM.send-us-form(action="#", method="#")
+          +e.TEXTAREA(name="text")
+          +e.INPUT(type="text", placeholder="Please insert your name")
+          +e.INPUT(type="text", placeholder="Please insert your email address")
+          +main-btn('Send message')
+        +e.DIV.info
+          +b.DIV.send-us-info-item
+            +e.I.icon(class="fa fa-clock-o")
+            +e.H4 Hours:
+            +e.P 7 Days a week from <br> #[span 10:00 am to 06:00 pm]
+          +b.DIV.send-us-info-item
+            +e.I.icon(class="fa fa-home")
+            +e.H4 Address:
+            +e.P 1234 North Main Street <br> #[span New York, NY 55555]
+          +b.DIV.send-us-info-item
+            +e.I.icon(class="fa fa-phone")
+            +e.H4 Phone:
+            +e.P +999 888 777 666 <br> #[span]
+          +b.DIV.send-us-info-item
+            +e.I.icon(class="fa fa-envelope-o")
+            +e.H4 Email:
+            +e.P example@example.com <br> #[span]
+
+
+
+

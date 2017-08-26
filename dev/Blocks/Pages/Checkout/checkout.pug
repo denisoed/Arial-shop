@@ -1,0 +1,93 @@
+mixin checkout()
+  +b.SECTION.checkout
+    +e.DIV.container
+      +b.checkout-accordeon
+        +e.DL
+          +e.DT Returning customers? #[span Click here to login] 
+          +e.DD
+            +e.P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis voluptatem repellat? Blanditiis iste, exercitationem porro, magni amet cupiditate enim, labore tenetur, praesentium quam consequuntur nesciunt. Culpa dicta adipisci voluptatem.
+            +e.FORM.return-custom(action="#", method="#")
+              +e.DIV.f-group
+                +e.INPUT(type="email", placeholder="Email")
+                +e.INPUT(type="password", placeholder="Password")
+              +btnWithIcon("Login", "icon-user")
+        +e.DL
+          +e.DT Have a coupone? #[span Click here to enter your code]
+          +e.DD
+            +e.FORM.coupon(action="#", method="#")
+              +e.INPUT(type="text", placeholder="Enter Your coupon code here")
+              +btnWithIcon("Apply Coupon", "icon-sent")
+      +e.DIV.details
+        +e.H3 Billing details
+        +b.FORM.checkout-form
+          +e.DIV.name_fullname
+            +e.INPUT(type="text", name="name", placeholder="Name")
+            +e.INPUT(type="text", name="fullname", placeholder="Fullname")
+          +e.INPUT(type="text", name="company", placeholder="Company name")
+          +e.INPUT(type="address", name="address", placeholder="Street address")
+          +e.INPUT(type="address", name="apartment", placeholder="Apartment, suite, unit etc (optional)")
+          +e.SELECT(name="coutry")
+            +e.OPTION Coutry
+            +e.OPTION Bangladesh
+            +e.OPTION India
+            +e.OPTION Pakistan
+            +e.OPTION Russian
+            +e.OPTION Srilanka
+          +e.INPUT(type="address", name="town", placeholder="Town/City")
+          +e.INPUT(type="address", name="state", placeholder="State/Country")
+          +e.INPUT(type="address", name="zip", placeholder="Postcode/Zip")
+          +e.DIV.phone_email
+            +e.INPUT(type="text", name="phone", placeholder="Phone")
+            +e.INPUT(type="text", name="email", placeholder="Email")
+      +e.DIV.order
+        +e.H3 Your order
+        +e.TABLE.table
+          +e.THEAD
+            +e.TR
+              +e.TH(style="width: 100%;") Product
+              +e.TH Total
+          +b.TBODY
+            +e.TR
+              +e.TD
+                +e.P Men's Long Sleeve Coat
+              +e.TD
+                +e.P 	$50.00    
+            +e.TR
+              +e.TD
+                +e.P Women's Short Sleeve Off
+              +e.TD
+                +e.P 	$100.00    
+            +e.TR
+              +e.TD
+                +e.P Subtotal
+              +e.TD
+                +e.P 	$150.00    
+            +e.TR
+              +e.TD
+                +e.P Total
+              +e.TD
+                +e.P 	$150.00    
+      +b.DIV.checkout-add-info
+        +e.H3 Additional information
+        +e.TEXTAREA
+      +b.FORM.checkout-payment
+        +e.H3 Payment method
+        +e.DIV.form-groups
+          +e.DIV.input
+            +e.INPUT(type="radio", name="method", id="direct-bank", value="direct-bank") 
+            +e.LABEL(for="direct-bank") Direct Bank Transfer
+            
+          +e.DIV.input
+            +e.INPUT(type="radio", name="method", id="check-pay", value="check-pay") 
+            +e.LABEL(for="check-pay") Check Payments
+
+          +e.DIV.input
+            +e.INPUT(type="radio", name="method", id="cash-on-delivery", value="cash-on-delivery") 
+            +e.LABEL(for="cash-on-delivery") Cash on Delivery
+
+          +e.DIV.input
+            +e.INPUT(type="radio", name="method", id="paypal", value="paypal") 
+            +e.LABEL(for="paypal") Paypal
+        +main-btn('Place order')  
+
+

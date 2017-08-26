@@ -1,0 +1,17 @@
+extends template
+
+include Blocks/Pages/Home/home-v1/home-collections/home-collections
+include Blocks/Pages/Home/home-v1/new-items/new-items
+include Blocks/Pages/Shop/products-list/products-list
+include Blocks/Pages/Home/home-v2/more-products/more-products
+
+block content
+  +viewDetail("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+  +main-banner("background-image: url('img/shop-banner/shop.jpeg')", 'Shop', 'Lorem ipsum dolor sit amet, consectetur')
+  +home-collections()
+  +products-list()
+  +newItems()
+  +subscribe()
+  +more-products()
+  
+  

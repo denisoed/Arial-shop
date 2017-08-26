@@ -1,0 +1,86 @@
+mixin cart()
+  +b.SECTION.cart
+    +e.DIV.container
+      +e.DIV.table
+        +e.TABLE.content(cellspacing="0", cellpadding="0")
+          +b.THEAD.cart-thead
+            +e.TR
+              +e.TD Image
+              +e.TD Product name
+              +e.TD Quantity
+              +e.TD Price
+              +e.TD Total
+              +e.TD Remove
+          +b.TBODY.cart-tbody
+
+            //- Item1
+            +e.TR
+              +e.TD
+                +e.DIV.image
+                  +e.IMG(src="img/products/shoes.jpeg")
+              +e.TD
+                +e.DIV.info-product
+                  +e.P.name Women best bag
+                  +e.P.about Model: #[span 1111]
+                  +e.P.about Size: #[span Small]
+                  +e.P.about Style: #[span Slim Kit]
+                  +e.P.about Color: #[span Dark]
+              +e.TD
+                +b.DIV.product-detail-quantity
+                   +e.INPUT(type="number" min="1" max="9" step="1" value="1")
+              +e.TD()
+                +e.P.price #[span $150.00] $120.00
+              +e.TD
+                +e.P.total $120.00
+              +e.TD
+                +e.BUTTON
+                  +e.I.icon(class="fa fa-trash")
+
+            //- Item1
+            +e.TR
+              +e.TD
+                +e.DIV.image
+                  +e.IMG(src="img/products/shoes.jpeg")
+              +e.TD
+                +e.DIV.info-product
+                  +e.P.name Women best bag
+                  +e.P.about Model: #[span 1111]
+                  +e.P.about Size: #[span Small]
+                  +e.P.about Style: #[span Slim Kit]
+                  +e.P.about Color: #[span Dark]
+              +e.TD
+                +b.DIV.product-detail-quantity
+                   +e.INPUT(type="number" min="1" max="9" step="1" value="1")
+              +e.TD()
+                +e.P.price #[span $150.00] $120.00
+              +e.TD
+                +e.P.total $120.00
+              +e.TD
+                +e.BUTTON
+                  +e.I.icon(class="fa fa-trash")
+
+            //- Item1
+            +e.TR
+              +e.TD
+                +e.DIV.image
+                  +e.IMG(src="img/products/shoes.jpeg")
+              +e.TD
+                +e.DIV.info-product
+                  +e.P.name Women best bag
+                  +e.P.about Model: #[span 1111]
+                  +e.P.about Size: #[span Small]
+                  +e.P.about Style: #[span Slim Kit]
+                  +e.P.about Color: #[span Dark]
+              +e.TD
+                +b.DIV.product-detail-quantity
+                   +e.INPUT(type="number" min="1" max="9" step="1" value="1")
+              +e.TD()
+                +e.P.price #[span $150.00] $120.00
+              +e.TD
+                +e.P.total $120.00
+              +e.TD
+                +e.BUTTON
+                  +e.I.icon(class="fa fa-trash")
+      +e.DIV.total_buy-now
+        +e.H5 Total price: #[span $360.00]            
+        +main-btn('Buy now!')            

@@ -1,0 +1,101 @@
+.top-line
+  width: 100%
+  min-height: 30px
+  background-color: $dark
+  &__container
+    +container()
+    .user-menu-option__or
+      color: $dark
+      font-family: $berlinFBSamibold
+      font-size: 20px
+    p
+      color: $white
+      font-family: $Montserrat-Regular
+      font-size: 14px
+    span
+      color: $white
+      margin-right: 8px
+  &__contact-us
+    min-height: 30px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: center
+  &-phone
+    display: flex
+    margin-right: 25px
+    align-items: center
+    &__icon
+      font-weight: bold
+  &-email
+    display: flex
+    align-items: center
+    &__icon
+      font-weight: bold
+  &__features
+    min-height: 30px  
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+  &-select
+    display: flex
+    align-items: center
+    position: relative
+    margin: 0 8px
+    &::after
+      content: ''
+      width: 2px
+      height: 10px
+      background-color: $white
+      transform: rotate(15deg)
+      margin-left: 15px
+    &__title
+      margin-right: 8px
+      color: $white
+      font-family: $Montserrat-Regular
+    &__btn
+      background-color: transparent
+      border: none
+      color: $white
+      font-family: $Montserrat-Bold
+      cursor: pointer
+      transition: all .4s ease
+      &:hover
+        color: $accent 
+    &__icon
+      color: $white
+      font-size: 14px
+      cursor: pointer
+    &-elements
+      position: absolute
+      top: 25px
+      right: 0
+      display: none
+      flex-direction: column
+      background-color: $white
+      padding: 10px 20px
+      box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75)
+      border-top: 3px solid $accent
+      z-index: 2
+      li
+        margin: 8px 0
+        a
+          color: $dark
+          font-family: $Montserrat-Bold
+          font-size: 14px
+          transition: all .4s ease
+          &:hover
+            color: $accent  
+  &-money
+    display: flex
+    align-items: center
+    &__title
+      margin-right: 8px
+  &-lang
+    display: flex
+    margin-left: 15px
+    align-items: center
+    &__title
+      margin-right: 8px

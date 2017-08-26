@@ -1,0 +1,50 @@
+mixin products-list()
+  +b.SECTION.products-list
+    +e.DIV.container
+        +b.DIV.products-title 
+            +e.H3.title Lorem #[span &] Ipsum
+            +e.P.parag Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        +b.DIV.products-filter
+            +e.H5.title Filters
+            +e.DIV.element(class="price")
+                +e.H5 Price
+                +e.INPUT(type="text", id="amount", readonly)
+                +e.DIV(id="slider-price")
+                +main-btn('Filter')   
+            +e.DIV.element(class="categor")
+                +e.H5 Categories
+                +e.DIV.btns
+                    +e.BUTTON(data-cat="women-clothing") Women Clothing
+                    +e.BUTTON(data-cat="men-hoodies") Men Hoodies
+                    +e.BUTTON(data-cat="women-t-shirts") Women T-Shirts
+                    +e.BUTTON(data-cat="men-t-shirts") Men T-Shirts
+                    +e.BUTTON(data-cat="women-bags") Women Bags
+            +e.DIV.element(class="brands")
+                +e.H5 Brands
+                +e.DIV.btns
+                    +e.BUTTON(data-brands="follo") Follo
+                    +e.BUTTON(data-brands="sholpic") Sholpic
+                    +e.BUTTON(data-brands="arong") Arong
+                    +e.BUTTON(data-brands="zara") Zara
+                    +e.BUTTON(data-brands="mango") Mango
+            +e.DIV.element(class="size")
+                +e.H5 Size
+                +e.DIV.btns
+                    +e.BUTTON(data-size="l") L
+                    +e.BUTTON(data-size="m") M
+                    +e.BUTTON(data-size="s") S
+                    +e.BUTTON(data-size="xl") XL
+                    +e.BUTTON(data-size="xxl") XXL
+            +e.DIV.element(class="color")
+                +e.H5 Color
+                +e.DIV.btns
+                    +e.BUTTON.blue(data-color="blue") Blue
+                    +e.BUTTON.red(data-color="red") Red
+                    +e.BUTTON.pink(data-color="pink") Pink
+                    +e.BUTTON.dark(data-color="dark") Dark
+                    +e.BUTTON.green(data-color="green") Green
+                    +e.BUTTON.orange(data-color="orange") Orange
+            +shop-banner("background-image: url('img/banner/banner2.jpeg')", "Save up to", "45%")
+            +shop-banner("background-image: url('img/banner/banner3.jpeg')", "Save up to", "50%")
+        +galleryProducts('gallery-products-item', 'products-filter__btn', 'products-item')
+  

@@ -1,0 +1,24 @@
+mixin home-slider()
+    +b.SECTION.home-slider
+        +navs("home-nav-left", "home-nav-right")
+        +e.DIV.home-carousel.owl-carousel 
+
+            //- Slide1
+            +b.DIV.home-slider-slide(style="background-image: url('img/home-slider/slide2-min.jpeg')")
+                +e.DIV.info1
+                    +e.H1(data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutDown") New arrival of bags
+                    +e.P(data-animation-in="rollIn" data-animation-out="animate-out rollOut") The Bag #[span FOR AUTUMN!]
+                    +main-btn("Shop now!", 'bounceInLeft', 'animate-out bounceOutRight')
+            //- Slide1
+            +b.DIV.home-slider-slide(style="background-image: url('img/home-slider/slide3-min.jpeg')")
+                +e.DIV.info2
+                    +e.DIV.content
+                        +e.H1(data-animation-in="flipInY" data-animation-out="animate-out fadeOutUp") Men collections 
+                        +e.P(data-animation-in="flipInX" data-animation-out="animate-out fadeOutLeft") #[span 30% OFF] on all clothes 
+                        +main-btn("Shop now!", 'fadeInUp', 'animate-out fadeOutDown')
+            //- Slide1
+            +b.DIV.home-slider-slide(style="background-image: url('img/home-slider/slide1-min.jpeg')")
+                +e.DIV.info3
+                    +e.H1(data-animation-in="slideInDown" data-animation-out="animate-out slideOutUp") Women's collection
+                    +e.P(data-animation-in="slideInRight" data-animation-out="animate-out fadeOut") #[span 10% off] on all clothes 
+                    +main-btn("Shop now!", 'fadeInLeft', 'animate-out fadeOutRight')

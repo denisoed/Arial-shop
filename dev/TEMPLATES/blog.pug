@@ -1,0 +1,11 @@
+extends template
+
+include Blocks/Pages/Blog/recent-post/recent-post
+include Blocks/Pages/Blog/blog-list/blog-list
+include Blocks/shortcodes/shortcodes
+
+block content
+  +main-banner("background-image: url('img/blog-banner/blog-banner.jpeg')", 'Blog', 'Lorem ipsum dolor sit amet, consectetur')
+  +recent-post()
+  +blog-list()
+  +subscribe()

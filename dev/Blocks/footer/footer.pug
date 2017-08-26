@@ -1,0 +1,45 @@
+mixin footer()
+  +b.FOOTER.footer 
+    +e.DIV.container 
+      +e.DIV.top-line
+        +e.DIV.about
+          +b.DIV.main-menu-logotype
+            +e.A.text(href="/") Arial>
+          +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+          +b.FORM.footer-form(method="#", action="#")
+            +e.INPUT(type="text", placeholder="Email")
+            +e.BUTTON(type="submit") Subscribe
+        +e.DIV.links    
+          +b.DIV.footer-menu
+            +e.H5.title Informations
+            +e.A(href="#") About Us
+            +e.A(href="#") Contact Us
+            +e.A(href="#") About Us 
+            +e.A(href="#") Contact Us
+            +e.A(href="#") About Us
+          +b.DIV.footer-menu
+            +e.H5.title My Account
+            +e.A(href="#") Sign In 
+            +e.A(href="#") View Cart
+            +e.A(href="#") My Wishlist
+            +e.A(href="#") Help
+          +b.DIV.footer-address
+            +e.H5.title Come Find Us
+            +e.P 1234 North Main Street  
+            +e.P New York, NY 55555  
+            +e.P Phone: #[span +999 888 777 666]
+            +e.P Email: #[span example@gmail.com]
+            +e.DIV.social-icons
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-facebook")
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-twitter")
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-instagram")
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-google-plus")
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-youtube")
+
+      +e.DIV.bottom-line
+        +e.H6 #[span Arial] 2017. All Right Reserved 

@@ -1,0 +1,142 @@
+.checkout
+  margin-bottom: 50px
+  &__container
+    +container()
+  h3
+    color: $dark
+    font-size: 22px
+    font-family: $berlinFBBold
+  select  
+    width: 100%
+    border: none
+    background-color: transparent
+    padding: 12px
+    border: 2px solid $grey
+    margin-bottom: 20px
+    font-size: 16px
+    font-family: $berlinFBSamibold
+    color: $text-color
+    box-sizing: border-box 
+    transition: all .4s ease
+  input
+    width: 100%
+    border: none
+    background-color: transparent
+    padding: 12px
+    border: 2px solid $grey
+    margin-bottom: 20px
+    font-size: 16px
+    font-family: $berlinFBSamibold
+    color: $dark
+    box-sizing: border-box 
+    transition: all .4s ease
+    // &:focus
+    //   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba($accent,.6)
+  &-accordeon
+    +col(12) 
+    margin-bottom: 30px 
+    dt
+      padding: 15px
+      border: 1px solid $dark
+      margin-bottom: 15px
+      cursor: pointer
+      color: $dark
+      font-family: $berlinFBSamibold
+      font-size: 18px
+      white-space: nowrap
+      display: flex
+      flex-wrap: wrap
+      span
+        margin-left: 8px
+        font-size: 19px
+        font-family: $berlinFBBold
+        color: $accent
+    dd
+      padding: 30px
+      p
+        font-size: 18px
+        font-family: $berlinFBRegular
+        color: $text-color
+        margin-bottom: 15px
+    &__f-group
+      display: flex
+      justify-content: space-between
+      input
+        width: 49%
+  &__details
+    +col(6) 
+  &-form
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    &__name_fullname
+      width: 100%
+      display: flex
+      justify-content: space-between
+      input
+        width: 48%
+    &__phone_email    
+      width: 100%
+      display: flex
+      justify-content: space-between
+      input
+        width: 48%
+  &__order
+    +col(6)
+  &__table
+    margin-top: 30px
+    td
+      border: 1px solid darken($grey, 10%)
+    thead
+      th
+        border: 1px solid $grey
+        font-size: 22px
+        font-family: $berlinFBSamibold
+        padding: 30px
+        background-color: $dark
+        color: $grey
+        text-align: left
+    tbody
+      td
+        border: 1px solid $grey
+        font-size: 18px
+        font-family: $berlinFBRegular
+        padding: 30px
+        color: $dark
+        text-align: left
+  &-add-info
+    margin-top: 30px    
+    +col(6)
+    textarea
+      margin-top: 30px
+      width: 100%
+      border: none
+      background-color: transparent
+      padding: 12px
+      border: 2px solid $grey
+      margin-bottom: 20px
+      font-size: 16px
+      font-family: $berlinFBSamibold
+      color: $dark
+      box-sizing: border-box 
+      transition: all .4s ease
+
+  &-payment  
+    +col(6)
+    margin-top: 30px
+    h3
+      margin-bottom: 30px
+    &__form-groups
+      margin-bottom: 30px  
+    &__input
+      display: flex
+      justify-content: flex-start
+      label
+        cursor: pointer
+        font-size: 18px
+        font-family: $berlinFBRegular
+        color: $dark
+      input
+        cursor: pointer
+        width: auto 
+        margin-right: 15px   

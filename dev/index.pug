@@ -1,0 +1,9 @@
+extends template
+
+include Blocks/Pages/Home/Home
+
+include Blocks/shortcodes/shortcodes
+
+block content
+  +viewDetail("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale') 
+  +Home()

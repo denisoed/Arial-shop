@@ -1,0 +1,14 @@
+mixin newItems()
+    +b.SECTION.new-items
+        +e.DIV.container
+            +b.DIV.title_and_navs
+                +sectionTitle('New items')
+                +navs('new-item_nav-left', 'new-item_nav-right')
+            +b.DIV.new-item-carousel.owl-carousel
+
+                // Slide
+                +productItem("background-image: url('img/products/shoes2.jpeg')", 'shoes', 'Lorem-ipsum',  '', '$100.00', 'New')
+                // Slide
+                +productItem("background-image: url('img/products/shirt2.jpg')", 'shirts', 'Lorem-ipsum',  '','$100.00', 'New')
+                // Slide
+                +productItem("background-image: url('img/products/bag2.jpeg')", 'bags', 'Lorem-ipsum', '','$100.00', 'New')

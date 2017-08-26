@@ -1,0 +1,16 @@
+mixin product-features()
+  +b.SECTION.product-features
+    +e.DIV.container
+      +b.DIV.product-features-tabs
+        +e.BUTTON.tab(class="product-features-active", data-tab="tab-description") Description
+        +e.BUTTON.tab(data-tab="tab-reviews") Reviews(#[span 2])
+      +b.DIV.product-features-content(class="tab-description")
+        +e.H4 Description
+        +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+        +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+      +b.DIV.product-features-content(class="tab-reviews")
+        +comments-block()
+
+
+
+  

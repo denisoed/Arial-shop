@@ -1,0 +1,15 @@
+extends template
+
+include Blocks/Pages/About/about-team/about-team
+include Blocks/Pages/About/facts/facts
+include Blocks/Pages/About/about-slider/about-slider
+include Blocks/Pages/About/partners/partners
+include Blocks/shortcodes/shortcodes
+
+block content
+  +main-banner("background-image: url('img/about-banner/about-banner.jpg')", 'About Us', 'Lorem ipsum dolor sit amet, consectetur')
+  +about-team()
+  +facts()
+  +about-slider()
+  +subscribe()
+  +partners()

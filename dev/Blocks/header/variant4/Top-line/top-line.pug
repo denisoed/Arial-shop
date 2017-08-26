@@ -1,0 +1,38 @@
+mixin top-line()
+  +b.DIV.top-line(class="top-line-v4") 
+    +e.DIV.container
+     
+      +e.DIV.contact-us
+        +b.DIV.top-line-phone
+          +e.SPAN.icon(class="icon-phone")
+          +e.P.number +999 888 777 666
+        +b.DIV.top-line-email
+          +e.SPAN.icon(class="icon-email")
+          +e.P.address example@example.com   
+                
+      +e.DIV.features
+
+        //- Select a payment method
+        +b.DIV.top-line-select(class="payment")
+          +e.P.title Currency:
+          +e.BUTTON.btn Eur
+          +e.I.icon(class="fa fa-caret-down")
+          +b.UL.top-line-select-elements(class="opt-payment the-modal")
+            +e.LI
+              +e.A(href="#") Eur
+            +e.LI
+              +e.A(href="#") Rub
+            +e.LI
+              +e.A(href="#") Usd
+        
+        //- Select language
+        +b.DIV.top-line-select(class="language")
+          +e.P.title Language:
+          +e.BUTTON.btn English
+          +e.I.icon(class="fa fa-caret-down")
+          +b.UL.top-line-select-elements(class="opt-lang the-modal")
+            +e.LI
+              +e.A(href="#") English
+            +e.LI
+              +e.A(href="#") Russian
+        +user-menu('top-line__user-menu')           

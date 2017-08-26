@@ -1,0 +1,77 @@
+.wishlist
+  margin-bottom: 50px
+  &__container
+    +container()
+    overflow-x: auto
+  &__content
+    width: 100%
+    border: 0px
+    border-collapse: collapse
+    border-spacing: 0px
+    white-space: nowrap
+    padding: 0
+    td
+      padding: 0px
+      border-width: 0px 
+      margin: 0px
+  &__table
+    width: 100%
+  &-thead
+    background-color: $dark
+    tr    
+      td
+        border: 1px solid darken($grey, 10%)
+        color: $grey
+        padding: 30px
+        font-size: 20px
+        font-family: $berlinFBBold
+  &-tbody
+    &__image
+      width: 180px
+      margin-left: 15px
+      img
+        width: 100%
+        height: auto
+    tr
+      td
+        text-align: center
+        padding: 30px !important
+        vertical-align: middle !important
+        border: 1px solid darken($grey, 10%)
+    &__info-product
+      text-align: left 
+    &__name
+      color: $accent
+      font-size: 18px     
+      font-family: $berlinFBBold
+      margin-bottom: 8px
+    &__about
+      color: $text-color
+      font-family: $berlinFBBold
+      font-size: 15px
+      span
+        font-family: $Montserrat-Bold
+        font-size: 16px
+        margin-left: 6px
+        color: lighten($text-color, 12%)
+    &__price
+      color: $text-color
+      font-family: $Montserrat-Regular
+      span
+        color: darken($grey, 15%)
+        text-decoration: line-through
+        font-size: 14px
+    &__stock
+      color: $text-color  
+      font-family: $Montserrat-Regular
+    button
+      background-color: transparent
+      border: none
+      cursor: pointer
+      .fa
+        font-size: 26px
+        padding: 8px
+        color: $text-color
+        transition: all .3s ease
+        &:hover
+          color: $accent  

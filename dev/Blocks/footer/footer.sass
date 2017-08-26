@@ -1,0 +1,97 @@
+.footer
+  background-color: $dark
+  padding: 50px 0 25px
+  &__container
+    +container()
+  &__top-line
+    display: flex
+    justify-content: space-between
+  &__about
+    +col(5)
+    margin-bottom: 30px
+    .main-menu-logotype
+      a
+        color: $white
+    p
+      color: $grey
+      font-family: $Montserrat-Regular
+      font-size: 14px
+      margin-top: 25px
+      line-height: 22px    
+  &-form
+    margin-top: 20px
+    display: inline-block
+    border-bottom: 1px solid $grey
+    padding-bottom: 5px
+    input
+      border: none
+      padding: 4px 8px
+      font-family: $berlinFBRegular
+      font-size: 18px
+      color: $white
+      background-color: transparent
+    button
+      background-color: $accent
+      border: none
+      color: $white    
+      font-family: $berlinFBRegular
+      cursor: pointer
+      font-size: 16px
+      padding: 6px
+  &__links
+    +col(7)
+    display: flex
+    justify-content: space-between    
+  &-menu
+    display: flex
+    flex-direction: column
+    width: 100%
+    h5
+      color: $white
+      font-size: 22px
+      font-family: $berlinFBBold
+      margin-bottom: 50px 
+    a
+      color: $grey
+      font-size: 16px   
+      font-family: $berlinFBSamibold
+      padding: 4px 0
+      transition: all .4s ease
+      &:hover
+        color: $accent
+  &-address
+    width: 100%
+    h5
+      color: $white
+      font-size: 22px
+      font-family: $berlinFBBold
+      margin-bottom: 50px 
+    p
+      color: $grey
+      font-size: 16px   
+      font-family: $berlinFBSamibold
+      padding: 4px 0
+      span
+        color: $accent
+    &__social-icons
+      margin-top: 15px
+      margin-left: -8px
+      a
+    &__icon
+      padding: 8px       
+      color: $accent
+      transition: all .4s ease
+      &:hover
+        color: $grey
+  &__bottom-line
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 50px
+    h6
+      color: $grey
+      font-size: 16px   
+      font-family: $berlinFBRegular
+      span
+        color: $accent     
+        font-family: $berlinFBBold

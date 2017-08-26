@@ -1,0 +1,28 @@
+.main-btn
+  padding: 10px
+  background-color: $accent
+  color: $white
+  font-size: 15px
+  font-family: $berlinFBSamibold
+  transition: all 0.3s ease
+  border-bottom: 3px solid darken($accent, 10%)
+  &:active
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8)
+  &:hover
+    background-color: lighten($accent, 2%)
+    transform: scale(1.005)
+    &::before
+      opacity: 1
+      visibility: visible
+  &::before
+    content: ''
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5)
+    transition: all .5s ease

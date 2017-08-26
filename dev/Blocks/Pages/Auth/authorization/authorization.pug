@@ -1,0 +1,43 @@
+mixin authorization()
+  +b.SECTION.authorization
+    +e.DIV.container
+      +b.DIV.authorization-login
+        +e.FORM.form(action="#", method="#")
+          +e.DIV.email
+            +e.INPUT(type="email", name="email", placeholder="Enter your email address")
+          +e.DIV.password
+            +e.INPUT(type="password", name="password", placeholder="Enter your password")
+          +e.DIV.password
+            +e.INPUT(type="password", name="password2" placeholder="Confirm your password")
+          +e.DIV.btn_checkbox
+            +main-btn('Login')
+            +e.LABEL Remember me?
+              +e.INPUT.remember(type="checkbox" name="option" value="") 
+            +e.A.forget(href="#") Forget password?
+          +e.DIV.login-with
+            +e.H4 Or login with
+            +e.DIV.social-site
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-facebook")      
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-vk")      
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-twitter")      
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-instagram")      
+              +e.A(href="#")
+                +e.I.icon(class="fa fa-google-plus")      
+      +b.DIV.authorization-register  
+        +e.FORM.form(action="#", method="#")
+          +e.DIV.name
+            +e.INPUT(type="text", placeholder="Full name")
+          +e.DIV.name
+            +e.INPUT(type="text", placeholder="Username")
+          +e.DIV.email
+            +e.INPUT(type="email", placeholder="Email address")
+          +e.DIV.password
+            +e.INPUT(type="password", name="password", placeholder="Password")
+          +e.DIV.password
+            +e.INPUT(type="password", name="password2" placeholder="Confirm password")
+          +main-btn('Register now')
+  

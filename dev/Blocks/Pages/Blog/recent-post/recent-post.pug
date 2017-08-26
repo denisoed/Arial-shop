@@ -1,0 +1,18 @@
+mixin recent-post()
+  +b.SECTION.recent-post
+    +e.DIV.container
+      +e.DIV.title_and_nav
+        +sectionTitle('Recent posts')
+        +navs('recent-post_nav-left', 'recent-post_nav-right')
+      +e.carousel.owl-carousel
+
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog1.jpeg')", "shoes", "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog2.jpeg')", "lingerie", "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog3.jpeg')", "accessories", "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+
+  

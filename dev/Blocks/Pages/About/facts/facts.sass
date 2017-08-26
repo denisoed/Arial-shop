@@ -1,0 +1,47 @@
+.facts
+  margin-bottom: 50px
+  &__container
+    +container()
+    display: flex
+    flex-direction: column
+  &-info
+    +col(6)
+    align-self: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    h4
+      color: $dark
+      font-family: $berlinFBBold
+      font-size: 26px
+    p
+      text-align: center
+      font-family: $berlinFBRegular
+      font-size: 18px
+      color: $text-color
+      margin-top: 15px
+      line-height: 1.4
+  &__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center    
+    margin-top: 30px
+  &-item
+    +col(4)
+    text-align: center
+    min-height: 200px
+    span
+      font-family: $berlinFBBold
+      color: $accent
+      font-size: 70px
+    h4
+      font-family: $berlinFBBold
+      color: $accent
+      font-size: 26px
+      margin-top: 10px
+    p  
+      font-family: $berlinFBRegular
+      color: $text-color
+      font-size: 18px
+      margin-top: 25px
+

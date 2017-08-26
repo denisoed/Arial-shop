@@ -1,0 +1,413 @@
+//------------ Main button-------\\
+mixin main-btn(text, animIn, animOut)
+  +b.A(href="#", data-animation-in=animIn, data-animation-out=animOut).main-btn= text
+
+//------------ Button with icon -------\\
+mixin btnWithIcon(text, icon)
+  +b.BUTTON.btn-with-icon= text
+    +e.I.icon(class=icon) 
+  
+//-------------- Modal Window ----------------\\
+mixin modalWindow(Class)
+  +b.DIV.modalWindow(class=Class)
+
+//-------------- Carousel navs --------------\\
+mixin navs(left, right)
+  +b.DIV.navs
+    +e.BUTTON.nav(class=left)
+      +e.I.icon(class="fa fa-chevron-left")
+    +e.BUTTON.nav(class=right)
+      +e.I.icon(class="fa fa-chevron-right")
+
+//-------------- Section title ---------------\\
+mixin sectionTitle(title)
+  +b.H2.section-title= title
+
+//---------- Block Subscribe ----------------\\
+mixin subscribe()
+  +b.SECTION.subscribe
+    +e.DIV.container
+      +e.DIV.content
+        +e.H4 Newsletter
+        +b.FORM.subscribe-form(method="#", action="#")
+          +e.INPUT(type="text", name="email", placeholder="Your email address...")
+          +e.BUTTON(type="submit")
+            +e.I.icon(class="icon-sent")  
+
+//-------------- Product item ---------------\\
+mixin productItem(img, category, name, priceSale, price, mod)
+  +b.DIV.product-item(class=category, class="mix all", data-cat=category)
+    +e.DIV.image(style=img)
+      if mod
+        +e.P.newOrSale= mod
+      else
+      +e.BUTTON.view(class="open-modal-view-detail")
+        +e.SPAN.icon(class="icon-view")
+      +e.A(href="product-detail.html").add-cart
+        +e.SPAN.icon(class="icon-cart")
+    +e.DIV.info
+      +e.DIV.name_and_price
+        +e.A(href="#")= name
+        if priceSale
+          +e.DIV.price-sale
+            +e.P= priceSale 
+            +e.SPAN= price
+        else
+          +e.SPAN= price
+      +e.DIV.features
+        +e.A.icon-wishlist(href="#",class="icon-heart")
+        +e.DIV.rateYo(class="rateYo")
+
+//-------------- View detail for select product item ---------------\\
+mixin viewDetail(img, category, name, priceSale, price, mod)
+  +b.DIV.view-detail(class=category, class="mix all", data-cat=category)
+    +e.DIV.content
+      +e.DIV.image(style=img)
+        if mod
+          +e.P.newOrSale= mod
+        else
+      +e.DIV.features  
+        +e.BUTTON.btn-close
+          +e.I.icon(class="fa fa-close")
+        +e.DIV.info
+          +e.DIV.name_and_price
+            +e.A(href="#")= name
+            if priceSale
+              +e.DIV.price-sale
+                +e.P= priceSale 
+                +e.SPAN= price
+            else
+              +e.SPAN= price
+          +e.DIV.features
+            +e.DIV.rateYo(class="rateYo")
+        +e.DIV.f-group
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-color")
+            +e.P.title Color:
+            +e.BUTTON.btn Blue
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-color the-modal")
+              +e.LI
+                +e.A(href="#") Blue
+              +e.LI
+                +e.A(href="#") Red
+              +e.LI
+                +e.A(href="#") Pink    
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-size")
+            +e.P.title Size:
+            +e.BUTTON.btn X
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-size the-modal")
+              +e.LI
+                +e.A(href="#") X
+              +e.LI
+                +e.A(href="#") XL
+              +e.LI
+                +e.A(href="#") XXL   
+          //- Select a color
+          +b.DIV.top-line-select(class="product-item-v2-type")
+            +e.P.title Type:
+            +e.BUTTON.btn Fabric
+            +e.I.icon(class="fa fa-caret-down")
+            +b.UL.top-line-select-elements(class="opt-type the-modal")
+              +e.LI
+                +e.A(href="#") Fabric
+              +e.LI
+                +e.A(href="#") Coton
+              +e.LI
+                +e.A(href="#") Slick 
+        +b.DIV.product-detail-quantity
+          +e.INPUT(type="number" min="1" max="9" step="1" value="1")                
+        +e.DIV.f-group
+          +btnWithIcon("Add to cart", "icon-cart")
+          +btnWithIcon("Wishlist", "icon-heart")
+          +btnWithIcon("Quick view", "icon-view") 
+
+//----------- Product item variant 2 --------------\\
+mixin productItem2(img, category, name, priceSale, price, mod, miniImg1, miniImg2)
+  +b.DIV.product-item2(class=category)
+    +e.DIV.image(style=img)
+      if mod
+        +e.P.newOrSale= mod
+      else
+      +e.BUTTON.view(class="open-modal-view-detail")
+        +e.SPAN.icon(class="icon-view")
+      +e.A(href="product-detail.html")
+        +e.SPAN.icon(class="icon-cart")
+    +e.DIV.info
+      +e.DIV.name_and_price
+        +e.A.name(href="#")= name
+        +e.P.desc The point of using Lorem Ipsum is that it has a more-or-less normal.
+        if priceSale
+          +e.DIV.price-sale
+            +e.P= priceSale 
+            +e.SPAN= price
+        else
+          +e.SPAN= price
+      +e.DIV.features
+        +e.DIV.rateYo(class="rateYo")
+        +btnWithIcon("Wishlist", "icon-heart")
+      +e.DIV.mini-Images    
+        +e.DIV.mini-image(style=miniImg1)    
+        +e.DIV.mini-image(style=miniImg2)    
+
+//----------- Banner HOME page --------------\\
+mixin bannerItem(title, img)
+  +b.DIV.bannerItem(style=img)
+    +e.H3= title
+    +main-btn("Shop now!")
+
+//------------ Blog item ------------\\
+mixin blogItem(img, category, title, name, date, comments)
+  +b.DIV.blogItem(class=category, class="mix all")
+    +e.DIV.image(style=img)
+    +e.DIV.info
+      +e.A.title(href="#")= title
+      +e.DIV.author_and_date
+        +e.SPAN.author
+          span by
+          p= name
+        +e.SPAN.date= date
+      +e.P.text Ut enim ad minim veniam, quis nostrud exer ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+      +e.DIV.comments
+        +e.I.icon(class="fa fa-comments-o")
+        span= comments
+        a(href="#") comment's
+
+//---------- Search modal window ----------------\\
+mixin searchModal()
+  +b.DIV.search-modal
+    +e.BUTTON.btn-close
+      +e.I.icon(class="fa fa-close")
+    +e.FORM.form
+      +e.INPUT(type="text", placeholder="Search...")
+      +e.BUTTON(type="submit")
+        +e.SPAN.icon(class="icon-search")
+
+//---------- Main banner ----------------\\
+mixin main-banner(img, title, desc)
+  +b.SECTION.main-banner(style=img)
+    +e.DIV.container
+      +e.H1.title= title 
+      +e.P.desc= desc
+      +b.UL.main-banner-breadcrumb
+        +e.LI
+          +e.A(href="/") Home
+        +e.LI
+          +e.A(href="#") #link
+
+//---------- Main banner ----------------\\
+mixin shop-banner(img, title, text)
+  +b.DIV.shop-banner(style=img)
+    +e.H4= title
+    +e.SPAN= text
+    +main-btn('Shop now!')
+
+//----------- Google map -------------\\
+mixin google-map()
+  +b.SECTION(id="google-map")
+
+//----------- Comments ------------\\
+mixin comments-block()
+  +b.DIV.comments-block
+    +e.OL.comments-list
+    
+      //- Comment
+      +e.LI.comment
+        +b.DIV.comments-block-comment-wrap
+          +e.DIV.comment-content
+            +e.DIV.avatar(style="background-image: url('img/avatar.png')")
+            +e.H5.author-name John Doe
+            +e.SPAN.date April 10, 2017 at 11:00 am 
+            +e.P.text Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+    
+      //- Comment
+      +e.LI.comment
+        +b.DIV.comments-block-comment-wrap
+          +e.DIV.comment-content
+            +e.DIV.avatar(style="background-image: url('img/avatar.png')")
+            +e.H5.author-name John Doe
+            +e.SPAN.date April 10, 2017 at 11:00 am 
+            +e.P.text Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+
+    +e.DIV.respond  
+      +e.H3 Leave a Comment
+      +b.FORM.comments-block-form(method="#", action="#")
+        +e.DIV.inputs
+          +e.INPUT(type="text", name="name", placeholder="Name") 
+          +e.INPUT(type="text", name="email", placeholder="Email") 
+          +e.INPUT(type="text", name="website", placeholder="Website")
+        +e.TEXTAREA(name="comment")
+        +btnWithIcon("Submit comment")
+
+//------------ Gallery Product----------------//
+mixin galleryProducts(galleryClass, filterClass, itemsClass)
+  +b.DIV.gallery(class=galleryClass)
+    +b.DIV.gallery-filter-btns
+        +e.BUTTON.filter(class=filterClass, data-filter='.all') All
+        +e.BUTTON.filter(class=filterClass, data-filter='.accessories') Accessories
+        +e.BUTTON.filter(class=filterClass, data-filter='.jeans') Jeans
+        +e.BUTTON.filter(class=filterClass, data-filter='.bags') Bags
+        +e.BUTTON.filter(class=filterClass, data-filter='.shoes') Shoes
+        +e.BUTTON.filter(class=filterClass, data-filter='.dresses') Dresses
+        +e.BUTTON.filter(class=filterClass, data-filter='.outerwear') Outerwear
+        +e.BUTTON.filter(class=filterClass, data-filter='.shirts') Shirts
+        +e.BUTTON.filter(class=filterClass, data-filter='.lingerie') Lingerie 
+    +b.DIV.gallery-items(class=itemsClass)
+        +productItem("background-image: url('img/products/shirt.jpeg')", 'shirts', 'Lorem-ipsum', '', '$100.00', 'New')
+        +productItem("background-image: url('img/products/shoes.jpeg')", 'shoes', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/lingerie.jpeg')", 'lingerie', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/accessories.jpeg')", 'accessories', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+        +productItem("background-image: url('img/products/outerwear.jpeg')", 'outerwear', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/outerwear2.jpg')", 'outerwear', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+        +productItem("background-image: url('img/products/jeans.jpeg')", 'jeans', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/dress.jpeg')", 'dresses', 'Lorem-ipsum', '',  '$100.00')
+        +productItem("background-image: url('img/products/shirt.jpeg')", 'shirts', 'Lorem-ipsum', '', '$100.00', 'New')
+        +productItem("background-image: url('img/products/shoes.jpeg')", 'shoes', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/lingerie.jpeg')", 'lingerie', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/accessories.jpeg')", 'accessories', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+        +productItem("background-image: url('img/products/outerwear.jpeg')", 'outerwear', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/outerwear2.jpg')", 'outerwear', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+        +productItem("background-image: url('img/products/jeans.jpeg')", 'jeans', 'Lorem-ipsum', '', '$100.00')
+        +productItem("background-image: url('img/products/dress.jpeg')", 'dresses', 'Lorem-ipsum', '',  '$100.00')
+    +b.DIV.gallery-loadMore    
+        +e.A(href="#") Load more...
+
+
+//------------ Gallery Posts----------------//
+mixin galleryPosts(filterClass, itemsClass)
+  +b.DIV.gallery
+    +b.DIV.gallery-filter-btns
+        +e.BUTTON.filter(class=filterClass, data-filter='.all') All
+        +e.BUTTON.filter(class=filterClass, data-filter='.accessories') Accessories
+        +e.BUTTON.filter(class=filterClass, data-filter='.jeans') Jeans
+        +e.BUTTON.filter(class=filterClass, data-filter='.bags') Bags
+        +e.BUTTON.filter(class=filterClass, data-filter='.shoes') Shoes
+        +e.BUTTON.filter(class=filterClass, data-filter='.dresses') Dresses
+        +e.BUTTON.filter(class=filterClass, data-filter='.outerwear') Outerwear
+        +e.BUTTON.filter(class=filterClass, data-filter='.shirts') Shirts
+        +e.BUTTON.filter(class=filterClass, data-filter='.lingerie') Lingerie 
+    +b.DIV.gallery-items(class=itemsClass)
+        +blogItem("background-image: url('img/blog/blog1.jpeg')", 'shirts', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog2.jpeg')", 'shoes', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog3.jpeg')", 'lingerie', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog1.jpeg')", 'accessories', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog2.jpeg')", 'bags', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog3.jpeg')", 'outerwear', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog1.jpeg')", 'jeans', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+        +blogItem("background-image: url('img/blog/blog2.jpeg')", 'dresses', "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+    +b.DIV.gallery-loadMore    
+        +e.A(href="#") Load more...
+
+//------------User Menu---------\\
+mixin user-menu(newClass)
+  +b.DIV.user-menu(class=newClass)
+    +e.DIV.content 
+      +e.SPAN.icon(class="icon-user")
+      +e.P.name Login
+      +e.I.icon(class="fa fa-caret-down")
+    
+    +b.DIV.user-menu-option.opt-user-menu(class="the-modal")
+      +e.DIV.opt-title My account
+      
+      +b.FORM.user-menu-form
+        +e.DIV.login
+          +e.INPUT.text(type="text", name="login", placeholder="Login")
+        +e.DIV.password
+          +e.INPUT.text(type="password", name="password", placeholder="Password")
+        +main-btn('Log in')
+        +e.LABEL Remember me?
+          +e.INPUT.remember(type="checkbox" name="option" value="") 
+
+      +e.P.or or Register
+        
+      +b.FORM.user-menu-form
+        +e.DIV.email
+          +e.INPUT.text(type="text", name="email", placeholder="email")
+        +e.DIV.login
+          +e.INPUT.text(type="text", name="login", placeholder="Login")
+        +e.DIV.password  
+          +e.INPUT.text(type="password", name="password", placeholder="Password")
+        +main-btn('Register')     
+
+//-------------- Back to top ----------\\
+mixin backTop()
+  +b.BUTTON.backTop(id="backTop")
+    +e.I.icon(class="fa fa-angle-up")
+
+//-------------- Preloader --------------\\
+mixin preloader()
+  +b.DIV.preloader
+    +e.DIV.dots
+      +e.DIV.dot
+      +e.DIV.dot
+      +e.DIV.dot
+      +e.DIV.dot
+      +e.DIV.dot
+  
+//-------------- Pagination ---------------\\
+mixin pagination(vars)
+  +b.DIV.pagination
+    +e.A.slider(href="#")
+      +e.I.icon(class="fa fa-angle-double-left")
+    +e.DIV.items  
+      +e.A.pag-item(href="#", class="pag-active") 1
+      +e.A.pag-item(href="#") 2
+      +e.A.pag-item(href="#") 3
+      +e.A.pag-item(href="#") 4
+      +e.A.pag-item(href="#") 5
+    +e.A.slider(href="#")
+      +e.I.icon(class="fa fa-angle-double-right") 
+         
+//----------------- Banner v2 ------------------\\
+mixin banner-v2(img, text)
+  +b.SECTION.banner-v2
+    +e.DIV.image(style=img)
+    +main-btn(text)
+
+//----------------- Deal of the day -----------------\\
+mixin deal()
+  +b.SECTION.deal
+    +e.DIV.container
+      +e.H2 New shoes  
+      +e.P Curabitur placerat urna augue, id luctus sem imperdiet id. Nunc congue ac libero ut lacinia. In ultriceselementum ipsum, in tempus enim accumsan.
+      +e.DIV.clock
+      +e.DIV.clock-message
+      +main-btn("Shop now")      
+  
+//--------------- Product 3 -----------------\\
+mixin productItem3(img, title, priceSale, price, sale)
+  +b.DIV.product-item3
+    if sale
+      +e.DIV.sale= sale
+    else  
+    +e.DIV.image(style=img)
+    +e.DIV.info
+      +e.A(href="#")= title
+      if priceSale
+        +e.DIV.price-sale
+          +e.P= priceSale 
+          +e.SPAN= price
+      else
+        +e.SPAN= price
+
+//------------ Subscribe 2 ---------------\\
+mixin subscribe2()
+  +b.SECTION.subscribe2
+    +e.DIV.container
+    +e.DIV.content  
+      +e.H3 Our Newsletter
+      +e.P Get 20% off
+      +b.FORM(action="#", method="#").subscribe2-form
+        +e.INPUT(type="text", placeholder="Enter your email address..")
+        +e.BUTTON
+          +e.I.icon(class="icon-sent")
+
+//------------- Open Main menu v4 -----------------\\
+mixin openMainMenuV4()
+  +b.BUTTON.open-main-menu-v4
+    +e.P Menu  
+  

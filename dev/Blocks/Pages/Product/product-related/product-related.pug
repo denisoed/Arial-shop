@@ -1,0 +1,16 @@
+mixin product-related()
+  +b.SECTION.product-related
+    +e.DIV.container
+      +e.DIV.title_and_nav
+        +sectionTitle('Related products')
+        +navs('product-related__nav-left', 'product-related__nav-right')
+      +b.product-related-carousel.owl-carousel
+
+        // Slide
+        +productItem("background-image: url('img/products/jeans.jpeg')", 'jeans', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale') 
+
+        // Slide
+        +productItem("background-image: url('img/products/shoes2.jpeg')", 'shoes', 'Lorem-ipsum', '', '$100.00')  
+
+        // Slide
+        +productItem("background-image: url('img/products/lingerie.jpeg')", 'lingerie', 'Lorem-ipsum', '', '$100.00')  

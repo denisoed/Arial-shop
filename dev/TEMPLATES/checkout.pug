@@ -1,0 +1,9 @@
+extends template
+
+include Blocks/Pages/Checkout/checkout
+include Blocks/shortcodes/shortcodes
+
+block content
+  +main-banner("background-image: url('img/checkout-banner/checkout.jpeg')", 'Checkout', 'Lorem ipsum dolor sit amet, consectetur')
+  +checkout()
+  +subscribe()

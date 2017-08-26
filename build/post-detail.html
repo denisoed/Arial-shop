@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Arial shop</title>
+    <meta charset="utf-8"/>
+    <meta content="Denisoed" name="author"/>
+    <meta content="Magazin" name="description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"/>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <!--if lt IE 9-->
+    <script src="libs/html5shiv/dist/html5shiv.min.js"></script>
+    <!--endif-->
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="search-modal">
+        <button class="search-modal__btn-close"><i class="search-modal__icon fa fa-close"></i>
+        </button>
+        <form class="search-modal__form"><input type="text" placeholder="Search..."/>
+          <button type="submit"><span class="search-modal__icon icon-search"></span>
+          </button>
+        </form>
+      </div>
+      <button class="backTop" id="backTop"><i class="backTop__icon fa fa-angle-up"></i>
+      </button>
+      <div class="preloader">
+        <div class="preloader__dots">
+          <div class="preloader__dot">
+          </div>
+          <div class="preloader__dot">
+          </div>
+          <div class="preloader__dot">
+          </div>
+          <div class="preloader__dot">
+          </div>
+          <div class="preloader__dot">
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="top-line"> 
+          <div class="top-line__container">
+            <div class="top-line__contact-us">
+              <div class="top-line-phone"><span class="top-line-phone__icon icon-phone"></span>
+                <p class="top-line-phone__number">+999 888 777 666
+                </p>
+              </div>
+              <div class="top-line-email"><span class="top-line-email__icon icon-email"></span>
+                <p class="top-line-email__address">example@example.com   
+                </p>
+              </div>
+            </div>
+            <div class="top-line__features">
+              <div class="top-line-select payment">
+                <p class="top-line-select__title">Currency:
+                </p>
+                <button class="top-line-select__btn">Eur
+                </button><i class="top-line-select__icon fa fa-caret-down"></i>
+                <ul class="top-line-select-elements opt-payment the-modal">
+                  <li><a href="#">Eur</a>
+                  </li>
+                  <li><a href="#">Rub</a>
+                  </li>
+                  <li><a href="#">Usd</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="top-line-select language">
+                <p class="top-line-select__title">Language:
+                </p>
+                <button class="top-line-select__btn">English
+                </button><i class="top-line-select__icon fa fa-caret-down"></i>
+                <ul class="top-line-select-elements opt-lang the-modal">
+                  <li><a href="#">English</a>
+                  </li>
+                  <li><a href="#">Russian</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-menu top-line__user-menu">
+                <div class="user-menu__content"> <span class="user-menu__icon icon-user"></span>
+                  <p class="user-menu__name">Login
+                  </p><i class="user-menu__icon fa fa-caret-down"></i>
+                </div>
+                <div class="user-menu-option opt-user-menu the-modal">
+                  <div class="user-menu-option__opt-title">My account
+                  </div>
+                  <form class="user-menu-form">
+                    <div class="user-menu-form__login"><input class="user-menu-form__text" type="text" name="login" placeholder="Login"/>
+                    </div>
+                    <div class="user-menu-form__password"><input class="user-menu-form__text" type="password" name="password" placeholder="Password"/>
+                    </div><a class="main-btn" href="#">Log in</a>
+                    <label>Remember me?<input class="user-menu-form__remember" type="checkbox" name="option" value=""/>
+                    </label>
+                  </form>
+                  <p class="user-menu-option__or">or Register
+                  </p>
+                  <form class="user-menu-form">
+                    <div class="user-menu-form__email"><input class="user-menu-form__text" type="text" name="email" placeholder="email"/>
+                    </div>
+                    <div class="user-menu-form__login"><input class="user-menu-form__text" type="text" name="login" placeholder="Login"/>
+                    </div>
+                    <div class="user-menu-form__password"> <input class="user-menu-form__text" type="password" name="password" placeholder="Password"/>
+                    </div><a class="main-btn" href="#">Register</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-menu fixed-menu">
+          <div class="main-menu__container">
+            <div class="main-menu-logotype"><a class="main-menu-logotype__text" href="/">Arial> </a>
+            </div>
+            <div class="main-menu__search-and-nav">
+              <form class="main-menu-search">
+                <div class="top-line-select category">
+                  <p class="top-line-select__title">
+                  </p>
+                  <div class="top-line-select__btn">All categories
+                  </div><i class="top-line-select__icon fa fa-caret-down"></i>
+                  <ul class="top-line-select-elements opt-category the-modal">
+                    <li><a href="#">All categories</a>
+                    </li>
+                    <li><a href="#">Clothes</a>
+                    </li>
+                    <li><a href="#">Shoes</a>
+                    </li>
+                  </ul>
+                </div><input type="text" placeholder="Search entire store here..."/>
+                <button class="main-menu-search__submit" type="submit"><span class="main-menu-search__btn-icon icon-search"></span>
+                </button>
+              </form>
+              <nav class="main-menu-navbar">
+                <ul class="main-menu-navbar__links">
+                  <li class="main-menu-navbar__li"><a class="main-menu-navbar__link" href="#">Home </a>
+                  </li>
+                  <li class="main-menu-navbar__li"><a class="main-menu-navbar__link" href="#">Man</a>
+                    <ul class="main-menu-navbar-dropdown">
+                      <li class="main-menu-navbar-dropdown__container"><img class="main-menu-navbar-dropdown__image" src="img/dropdown/dropdown2.jpeg" alt="" role="presentation"/>
+                        <ul class="main-menu-navbar-dropdown__column">
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>News
+                            </h6>
+                            <ul>
+                              <li><a href="#">New Clothing </a>
+                              </li>
+                              <li><a href="#">New Shoes</a>
+                              </li>
+                              <li><a href="#">New Bags </a>
+                              </li>
+                              <li><a href="#">New Outerwear </a>
+                              </li>
+                              <li><a href="#">New Accessories </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Clothing
+                            </h6>
+                            <ul>
+                              <li><a href="#">Jeans</a>
+                              </li>
+                              <li><a href="#">Winter Jackets</a>
+                              </li>
+                              <li><a href="#">Formal Shirts</a>
+                              </li>
+                              <li><a href="#">Suits & Blazers</a>
+                              </li>
+                              <li><a href="#">Track wear</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Accessories
+                            </h6>
+                            <ul>
+                              <li><a href="#">Mens Jewellery</a>
+                              </li>
+                              <li><a href="#">Bag</a>
+                              </li>
+                              <li><a href="#">Sunglasses</a>
+                              </li>
+                              <li><a href="#">Watches</a>
+                              </li>
+                              <li><a href="#">Hair Care</a>
+                              </li>
+                              <li><a href="#">Ties & Cufflinks</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-menu-navbar__li"><a class="main-menu-navbar__link" href="#">Women</a>
+                    <ul class="main-menu-navbar-dropdown">
+                      <li class="main-menu-navbar-dropdown__container">
+                        <ul class="main-menu-navbar-dropdown__column">
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>News
+                            </h6>
+                            <ul>
+                              <li><a href="#">New Clothing </a>
+                              </li>
+                              <li><a href="#">New Shoes</a>
+                              </li>
+                              <li><a href="#">New Bags </a>
+                              </li>
+                              <li><a href="#">New Outerwear </a>
+                              </li>
+                              <li><a href="#">New Accessories </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Clothing
+                            </h6>
+                            <ul>
+                              <li><a href="#">Jeans</a>
+                              </li>
+                              <li><a href="#">Winter Jackets</a>
+                              </li>
+                              <li><a href="#">Formal Shirts</a>
+                              </li>
+                              <li><a href="#">Suits & Blazers</a>
+                              </li>
+                              <li><a href="#">Track wear</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Accessories
+                            </h6>
+                            <ul>
+                              <li><a href="#">Mens Jewellery</a>
+                              </li>
+                              <li><a href="#">Bag</a>
+                              </li>
+                              <li><a href="#">Sunglasses</a>
+                              </li>
+                              <li><a href="#">Watches</a>
+                              </li>
+                              <li><a href="#">Hair Care</a>
+                              </li>
+                              <li><a href="#">Ties & Cufflinks</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul><img class="main-menu-navbar-dropdown__image" src="img/dropdown/dropdown1.jpeg" alt="" role="presentation"/>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-menu-navbar__li"><a class="main-menu-navbar__link" href="#">Other</a>
+                    <ul class="main-menu-navbar-dropdown">
+                      <li class="main-menu-navbar-dropdown__container"><img class="main-menu-navbar-dropdown__image" src="img/dropdown/dropdown2.jpeg" alt="" role="presentation"/>
+                        <ul class="main-menu-navbar-dropdown__column">
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>News
+                            </h6>
+                            <ul>
+                              <li><a href="#">New Clothing </a>
+                              </li>
+                              <li><a href="#">New Shoes</a>
+                              </li>
+                              <li><a href="#">New Bags </a>
+                              </li>
+                              <li><a href="#">New Outerwear </a>
+                              </li>
+                              <li><a href="#">New Accessories </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Clothing
+                            </h6>
+                            <ul>
+                              <li><a href="#">Jeans</a>
+                              </li>
+                              <li><a href="#">Winter Jackets</a>
+                              </li>
+                              <li><a href="#">Formal Shirts</a>
+                              </li>
+                              <li><a href="#">Suits & Blazers</a>
+                              </li>
+                              <li><a href="#">Track wear</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="main-menu-navbar-dropdown__Li">
+                            <h6>Accessories
+                            </h6>
+                            <ul>
+                              <li><a href="#">Mens Jewellery</a>
+                              </li>
+                              <li><a href="#">Bag</a>
+                              </li>
+                              <li><a href="#">Sunglasses</a>
+                              </li>
+                              <li><a href="#">Watches</a>
+                              </li>
+                              <li><a href="#">Hair Care</a>
+                              </li>
+                              <li><a href="#">Ties & Cufflinks</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="main-menu__features">
+              <!-- Search button (The button appears on the screen width of 992)-->
+              <div class="main-menu-search-btn"><span class="main-menu-search-btn__icon icon-search"></span>
+              </div>
+              <!-- Wishlist modal menu  -->
+              <div class="main-menu-wishlist"><span class="main-menu-wishlist__icon icon-heart">
+                <div class="main-menu-wishlist__quantity-item">3
+                </div></span>
+                <div class="main-menu-option opt-wishlist the-modal">
+                  <div class="main-menu-option__opt-title">Wishlist
+                  </div>
+                  <div class="main-menu-option-item main-menu-option__wishlist">
+                    <div class="main-menu-option-item__wishlist-info"><img class="main-menu-option-item__image" src="img/products/shoes.jpeg" alt="Cart item image" title=""/>
+                      <div class="main-menu-option-item__name_and_price"><a class="main-menu-option-item__name" href="#">lorem ipsum</a><span class="main-menu-option-item__price">$100.00</span><span class="main-menu-option-item__qty">qty: <span>1</span></span>
+                      </div>
+                    </div>
+                    <div class="main-menu-option-item__btns"> <a class="main-btn" href="#">Add cart</a><span class="main-menu-option-item__icon icon-trash"></span>
+                    </div>
+                  </div>
+                  <div class="main-menu-option-item main-menu-option__wishlist">
+                    <div class="main-menu-option-item__wishlist-info"><img class="main-menu-option-item__image" src="img/products/shoes.jpeg" alt="Cart item image" title=""/>
+                      <div class="main-menu-option-item__name_and_price"><a class="main-menu-option-item__name" href="#">lorem ipsum</a><span class="main-menu-option-item__price">$100.00</span><span class="main-menu-option-item__qty">qty: <span>2</span></span>
+                      </div>
+                    </div>
+                    <div class="main-menu-option-item__btns"> <a class="main-btn" href="#">Add cart</a><span class="main-menu-option-item__icon icon-trash"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Cart modal menu  -->
+              <div class="main-menu-cart">
+                <div class="main-menu-cart__content"><span class="main-menu-cart__icon icon-cart">
+                  <div class="main-menu-cart__quantity-item">8
+                  </div></span><span class="main-menu-cart__price">Your cart: <br> <span>$ 300.00</span>    </span>
+                </div>
+                <div class="main-menu-option opt-cart the-modal">
+                  <div class="main-menu-option__opt-title"><span>8</span> items in your cart
+                  </div>
+                  <div class="main-menu-option-item"><img class="main-menu-option-item__image" src="img/products/shoes.jpeg" alt="Cart item image" title=""/>
+                    <div class="main-menu-option-item__name_and_price"><a class="main-menu-option-item__name" href="#">lorem ipsum</a><span class="main-menu-option-item__price">$100.00</span><span class="main-menu-option-item__qty">qty: <span>5</span></span>
+                    </div><span class="main-menu-option-item__icon icon-trash"></span>
+                  </div>
+                  <div class="main-menu-option-item"><img class="main-menu-option-item__image" src="img/products/shoes.jpeg" alt="Cart item image" title=""/>
+                    <div class="main-menu-option-item__name_and_price"><a class="main-menu-option-item__name" href="#">lorem ipsum</a><span class="main-menu-option-item__price">$100.00</span><span class="main-menu-option-item__qty">qty: <span>1</span></span>
+                    </div><span class="main-menu-option-item__icon icon-trash"></span>
+                  </div>
+                  <div class="main-menu-option-item"><img class="main-menu-option-item__image" src="img/products/shoes.jpeg" alt="Cart item image" title=""/>
+                    <div class="main-menu-option-item__name_and_price"><a class="main-menu-option-item__name" href="#">lorem ipsum</a><span class="main-menu-option-item__price">$100.00</span><span class="main-menu-option-item__qty">qty: <span>2</span></span>
+                    </div><span class="main-menu-option-item__icon icon-trash"></span>
+                  </div>
+                  <div class="main-menu-option__features">  <span class="main-menu-option__total">Total: <span>$800.00</span></span>
+                    <div class="main-menu-option__btns"><a class="main-btn" href="#">View cart</a><a class="main-btn" href="#">Checkout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-menu-bars"><span>Menu</span><i class="main-menu-bars__icon fa fa-bars"></i>
+          </div>
+        </div>
+      </header>
+      <section class="post-detail">
+        <div class="post-detail__container">
+          <div class="post-detail-item">
+            <div class="post-detail-item__image" style="background-image: url('img/blog/blog1.jpeg');">
+            </div>
+            <h3 class="post-detail-item__title">Lorem ipsum dolor
+            </h3>
+            <div class="post-detail-item__author"><span>by</span>
+              <p>Bob Marley</p>
+            </div>
+            <div class="post-detail-item__date_and_comments"> <span class="post-detail-item__date">March 10, at 10:00</span>
+              <div class="post-detail-item__comments"><i class="post-detail-item__icon fa fa-comments-o"></i><span>2</span><a href="#">comment's</a>
+              </div>
+            </div>
+            <div class="post-detail-item__block-text">
+              <div class="post-detail-item__anything-phrase">
+                <p class="post-detail-item__phrase">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                </p>
+                <div class="post-detail-item__author"><span>by</span>
+                  <p>Bob Marley</p>
+                </div>
+              </div>
+              <div class="post-detail-item__text"> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat semper viverra. Bibendum est ultricies integer quis. Sit amet nisl purus in mollis nunc sed id. Eu ultrices vitae auctor eu augue. Vestibulum rhoncus est pellentesque elit. Velit dignissim sodales ut eu sem integer vitae. Mauris in aliquam sem fringilla. Mauris a diam maecenas sed. Dolor purus non enim praesent elementum. Eu scelerisque felis imperdiet proin fermentum leo.
+                </p>
+                <p>Arcu cursus vitae congue mauris rhoncus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Neque gravida in fermentum et sollicitudin ac. Id venenatis a condimentum vitae. Urna molestie at elementum eu facilisis. Ut pharetra sit amet aliquam id diam maecenas ultricies. Consequat ac felis donec et odio pellentesque. Ipsum a arcu cursus vitae congue mauris rhoncus aenean vel. Proin libero nunc consequat interdum. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Ultricies lacus sed turpis tincidunt id. Mauris pharetra et ultrices neque ornare aenean euismod. Metus vulputate eu scelerisque felis. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Odio ut sem nulla pharetra diam sit. Posuere lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipiscing. Tortor id aliquet lectus proin nibh nisl condimentum id. Senectus et netus et malesuada fames ac.
+                </p>
+                <p>Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Libero justo laoreet sit amet cursus sit. Odio tempor orci dapibus ultrices in. Ut lectus arcu bibendum at varius. Tellus molestie nunc non blandit massa enim nec dui. Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Eu sem integer vitae justo eget magna fermentum iaculis. Velit sed ullamcorper morbi tincidunt ornare massa. Faucibus turpis in eu mi. Vitae suscipit tellus mauris a diam maecenas sed enim. Imperdiet sed euismod nisi porta. At tellus at urna condimentum mattis pellentesque id nibh. Mauris sit amet massa vitae.  
+                </p>
+              </div>
+            </div>
+          </div>
+          <h5 class="post-detail-title_for_comments">Comments      
+          </h5>
+          <div class="comments-block">
+            <ol class="comments-block__comments-list">
+              <li class="comments-block__comment">
+                <div class="comments-block-comment-wrap">
+                  <div class="comments-block-comment-wrap__comment-content">
+                    <div class="comments-block-comment-wrap__avatar" style="background-image: url('img/avatar.png');">
+                    </div>
+                    <h5 class="comments-block-comment-wrap__author-name">John Doe
+                    </h5><span class="comments-block-comment-wrap__date">April 10, 2017 at 11:00 am </span>
+                    <p class="comments-block-comment-wrap__text">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="comments-block__comment">
+                <div class="comments-block-comment-wrap">
+                  <div class="comments-block-comment-wrap__comment-content">
+                    <div class="comments-block-comment-wrap__avatar" style="background-image: url('img/avatar.png');">
+                    </div>
+                    <h5 class="comments-block-comment-wrap__author-name">John Doe
+                    </h5><span class="comments-block-comment-wrap__date">April 10, 2017 at 11:00 am </span>
+                    <p class="comments-block-comment-wrap__text">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div class="comments-block__respond"> 
+              <h3>Leave a Comment
+              </h3>
+              <form class="comments-block-form" method="#" action="#">
+                <div class="comments-block-form__inputs"><input type="text" name="name" placeholder="Name"/><input type="text" name="email" placeholder="Email"/><input type="text" name="website" placeholder="Website"/>
+                </div><textarea name="comment"></textarea>
+                <button class="btn-with-icon">Submit comment<i class="btn-with-icon__icon"> </i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="subscribe__container">
+          <div class="subscribe__content">
+            <h4>Newsletter
+            </h4>
+            <form class="subscribe-form" method="#" action="#"><input type="text" name="email" placeholder="Your email address..."/>
+              <button type="submit"><i class="subscribe-form__icon icon-sent"> </i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer"> 
+        <div class="footer__container"> 
+          <div class="footer__top-line">
+            <div class="footer__about">
+              <div class="main-menu-logotype"><a class="main-menu-logotype__text" href="/">Arial></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+              </p>
+              <form class="footer-form" method="#" action="#"><input type="text" placeholder="Email"/>
+                <button type="submit">Subscribe
+                </button>
+              </form>
+            </div>
+            <div class="footer__links">   
+              <div class="footer-menu">
+                <h5 class="footer-menu__title">Informations
+                </h5><a href="#">About Us</a><a href="#">Contact Us</a><a href="#">About Us </a><a href="#">Contact Us</a><a href="#">About Us</a>
+              </div>
+              <div class="footer-menu">
+                <h5 class="footer-menu__title">My Account
+                </h5><a href="#">Sign In </a><a href="#">View Cart</a><a href="#">My Wishlist</a><a href="#">Help</a>
+              </div>
+              <div class="footer-address">
+                <h5 class="footer-address__title">Come Find Us
+                </h5>
+                <p>1234 North Main Street  
+                </p>
+                <p>New York, NY 55555  
+                </p>
+                <p>Phone: <span>+999 888 777 666</span>
+                </p>
+                <p>Email: <span>example@gmail.com</span>
+                </p>
+                <div class="footer-address__social-icons"><a href="#"><i class="footer-address__icon fa fa-facebook"></i></a><a href="#"><i class="footer-address__icon fa fa-twitter"></i></a><a href="#"><i class="footer-address__icon fa fa-instagram"></i></a><a href="#"><i class="footer-address__icon fa fa-google-plus"></i></a><a href="#"><i class="footer-address__icon fa fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom-line">
+            <h6><span>Arial</span> 2017. All Right Reserved 
+            </h6>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-VAPLiH0Yb_wqRN7yiT_lvHljLQfNG8Q&amp;callback=initMap" async defer></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

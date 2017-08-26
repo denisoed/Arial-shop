@@ -1,0 +1,29 @@
+.main-btn
+  border-radius: 20px
+  padding: 10px
+  color: $white
+  background-color: $accent
+  border: 2px solid $accent
+  position: relative
+  overflow: hidden
+  transition: all .3s ease
+  font-size: 15px
+  font-family: $berlinFBSamibold
+  z-index: 2
+  &::before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 20px
+    width: 0%
+    height: 0%
+    background-color: $white
+    z-index: -1
+    transition: all .3s ease
+  &:hover
+    color: $dark
+    &::before
+      width: 100%
+      height: 100%  

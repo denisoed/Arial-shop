@@ -1,0 +1,10 @@
+extends template
+
+include Blocks/Pages/Collections/collections-list/collections-list
+
+block content 
+  +main-banner("background-image: url('img/collection-banner/collection.jpeg')", 'All collections', 'Lorem ipsum dolor sit amet, consectetur')
+  +collections-list()
+  +subscribe()
+  
+  

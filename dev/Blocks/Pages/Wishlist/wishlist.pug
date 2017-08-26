@@ -1,0 +1,66 @@
+mixin wishlist()
+  +b.SECTION.wishlist
+    +e.DIV.container
+      +e.DIV.table
+        +e.TABLE.content(cellspacing="0", cellpadding="0")
+          +b.THEAD.wishlist-thead
+            +e.TR
+              +e.TD Image
+              +e.TD Product name
+              +e.TD Price
+              +e.TD Stock status
+              +e.TD Add to cart 
+              +e.TD Remove
+          +b.TBODY.wishlist-tbody
+
+            //- Item1
+            +e.TR
+              +e.TD
+                +e.DIV.image
+                  +e.IMG(src="img/products/shoes.jpeg")
+              +e.TD
+                +e.DIV.info-product
+                  +e.P.name Women best bag
+                  +e.P.about Model: #[span 1111]
+                  +e.P.about Size: #[span Small]
+                  +e.P.about Style: #[span Slim Kit]
+                  +e.P.about Color: #[span Dark]
+              +e.TD()
+                +e.P.price #[span $150.00] $120.00
+              +e.TD
+                +e.P.stock In stock
+              +e.TD
+                +main-btn('Add to cart')
+              +e.TD
+                +e.BUTTON
+                  +e.I.icon(class="fa fa-trash")
+            //- Item1
+            +e.TR
+              +e.TD
+                +e.DIV.image
+                  +e.IMG(src="img/products/shoes.jpeg")
+              +e.TD
+                +e.DIV.info-product
+                  +e.P.name Women best bag
+                  +e.P.about Model: #[span 1111]
+                  +e.P.about Size: #[span Small]
+                  +e.P.about Style: #[span Slim Kit]
+                  +e.P.about Color: #[span Dark]
+              +e.TD()
+                +e.P.price #[span $150.00] $120.00
+              +e.TD
+                +e.P.stock In stock
+              +e.TD
+                +main-btn('Add to cart')
+              +e.TD
+                +e.BUTTON
+                  +e.I.icon(class="fa fa-trash")
+
+
+
+
+
+
+
+
+  

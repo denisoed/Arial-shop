@@ -1,0 +1,13 @@
+extends template
+
+include Blocks/Pages/Collection-detail/collection-item/collection-item
+include Blocks/Pages/Collection-detail/more-products/more-products
+
+include Blocks/shortcodes/shortcodes
+
+block content 
+  +main-banner("background-image: url('img/collection-d-banner/collection-d.jpeg')", 'Collection detail', 'Lorem ipsum dolor sit amet, consectetur')
+  +viewDetail("background-image: url('img/products/bag.jpeg')", 'bags', 'Lorem-ipsum', '$150.00', '$100.00', 'Sale')
+  +collection-item()
+  +subscribe()
+  +more-products()

@@ -1,0 +1,61 @@
+//-------------------- Block Subscribe --------------------\\
+.subscribe
+  margin-bottom: 50px
+  &__container
+    +container()
+  &__content
+    border-radius: 30px
+    border: 2px solid $accent
+    display: flex
+    width: 100%
+    min-height: 120px
+    justify-content: space-around
+    align-items: center
+    h4
+      color: $accent
+      font-size: 52px
+      font-family: $Painter_PERSONAL
+  &-form
+    border-bottom: 2px solid $accent
+    width: 500px
+    display: flex
+    justify-content: space-between
+    padding: 10px
+    box-sizing: border-box
+    input
+      width: 100%
+      background-color: transparent    
+      border: none
+      color: $accent
+      font-family: $berlinFBRegular
+      font-size: 24px
+    ::-webkit-input-placeholder
+      font:
+        size: 20px
+        family: $berlinFBRegular
+      color: $accent
+
+    :-moz-placeholder
+      font:
+        size: 20px
+        family: $berlinFBRegular
+      color: $accent
+
+    ::-moz-placeholder
+      font:
+        size: 20px
+        family: $berlinFBRegular
+      color: $accent
+
+    :-ms-input-placeholder
+      font:
+        size: 20px
+        family: $berlinFBRegular
+      color: $accent
+    button
+      border: none
+      background-color: transparent
+      cursor: pointer
+    &__icon
+      color: $accent
+      font-size: 36px

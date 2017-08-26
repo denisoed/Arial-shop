@@ -1,0 +1,15 @@
+mixin blog()
+  +b.SECTION.blog
+    +e.DIV.container
+      +e.DIV.title_and_navs
+        +sectionTitle("Blog posts")
+        +navs('blog-nav-left', 'blog-nav-right')
+      +e.DIV.carousel.owl-carousel
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog1.jpeg')", "shirts", "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog2.jpeg')", "shoes",  "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")
+
+        //- Blog
+        +blogItem("background-image: url('img/blog/blog3.jpeg')", "outerwear", "lorem ipsum dolor", "Bob Marley", "March 9, at 09:15", "15")

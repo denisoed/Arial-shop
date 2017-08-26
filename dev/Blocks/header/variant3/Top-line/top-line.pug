@@ -1,0 +1,25 @@
+mixin top-line()
+  +b.DIV.top-line(class="top-line-v3")
+    +e.DIV.container
+      //----------Logotype-----------\\
+      +b.DIV.main-menu-logotype
+        +e.A.text(href="/") Arial>           
+
+      +b.FORM.main-menu-search
+
+        +b.DIV.top-line-select(class="category")
+          +e.P.title
+          +e.DIV.btn All categories
+          +e.I.icon(class="fa fa-caret-down")
+          +b.UL.top-line-select-elements(class="opt-category the-modal")
+            +e.LI
+              +e.A(href="#") All categories
+            +e.LI
+              +e.A(href="#") Clothes
+            +e.LI
+              +e.A(href="#") Shoes
+
+        +e.INPUT(type="text", placeholder="Search entire store here...") 
+        +e.BUTTON.submit(type="submit")
+          +e.SPAN.btn-icon(class="icon-search")
+          

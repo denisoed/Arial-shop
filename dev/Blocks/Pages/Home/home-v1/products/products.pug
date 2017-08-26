@@ -1,0 +1,33 @@
+mixin products()
+    +b.SECTION.products
+        +e.DIV.container
+            +b.DIV.products-title 
+                +e.H3.title Lorem #[span &] Ipsum
+                +e.P.parag Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            +b.DIV.products-filter
+                +e.H5.title Filters
+                +e.DIV.element(class="price")
+                    +e.H5 Price
+                    +e.DIV.btns
+                        +e.BUTTON(data-price="0-20") $00.00 - $20.00
+                        +e.BUTTON(data-price="20-50") $20.00 - $50.00
+                        +e.BUTTON(data-price="50-100") $50.00 - $100.00
+                        +e.BUTTON(data-price="100-150") $100.00 - $150.00
+                +e.DIV.element(class="size")
+                    +e.H5 Size
+                    +e.DIV.btns
+                        +e.BUTTON(data-size="l") L
+                        +e.BUTTON(data-size="m") M
+                        +e.BUTTON(data-size="s") S
+                        +e.BUTTON(data-size="xl") XL
+                        +e.BUTTON(data-size="xxl") XXL
+                +e.DIV.element(class="color")
+                    +e.H5 Color
+                    +e.DIV.btns
+                        +e.BUTTON.blue(data-color="blue") Blue
+                        +e.BUTTON.red(data-color="red") Red
+                        +e.BUTTON.pink(data-color="pink") Pink
+                        +e.BUTTON.dark(data-color="dark") Dark
+                        +e.BUTTON.green(data-color="green") Green
+                        +e.BUTTON.orange(data-color="orange") Orange
+            +galleryProducts('gallery-products-item', 'products-filter__btn', 'products-item')       
