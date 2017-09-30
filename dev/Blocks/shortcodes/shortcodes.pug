@@ -187,7 +187,7 @@ mixin searchModal()
 
 //---------- Main banner ----------------\\
 mixin main-banner(img, title, desc)
-  +b.SECTION.main-banner(style=img)
+  +b.SECTION.main-banner(style=img data-type="background" data-speed="5")
     +e.DIV.container
       +e.H1.title= title 
       +e.P.desc= desc
@@ -372,8 +372,8 @@ mixin banner-v2(img, text)
 mixin deal()
   +b.SECTION.deal
     +e.DIV.container
-      +e.H2 New shoes  
-      +e.P Curabitur placerat urna augue, id luctus sem imperdiet id. Nunc congue ac libero ut lacinia. In ultriceselementum ipsum, in tempus enim accumsan.
+      +e.H2.title New shoes  
+      +e.P.desc Curabitur placerat urna augue, id luctus sem imperdiet id. Nunc congue ac libero ut lacinia. In ultriceselementum ipsum, in tempus enim accumsan.
       +e.DIV.clock
       +e.DIV.clock-message
       +main-btn("Shop now")      

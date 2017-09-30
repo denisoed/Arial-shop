@@ -6977,7 +6977,7 @@ p {
 
 /**********************Main buttons**************************/
 .main-btn {
-  padding: 10px;
+  padding: 6px 18px;
   background: -webkit-gradient(linear, left top, right top, from(#fb2a83), to(#9068be));
   background: -webkit-linear-gradient(left, #fb2a83 0%, #9068be 100%);
   background: -o-linear-gradient(left, #fb2a83 0%, #9068be 100%);
@@ -7125,20 +7125,23 @@ p {
 
 /*********************** Navs *******************/
 .navs__nav {
-  background-color: #fb2a83;
+  background: transparent;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
-  margin: 0 4px;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease; }
-  .navs__nav:hover {
-    background-color: #fc529a; }
+  margin: 0 4px; }
+  .navs__nav:hover .navs__icon {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3); }
 
 .navs__icon {
-  color: #f4f6f8; }
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  color: #fb2a83;
+  font-size: 26px; }
 
 .modalWindow {
   padding: 15px;
@@ -10057,9 +10060,9 @@ p {
   padding: 0;
   padding-top: 15px; }
 
-.opt-wishlist {
+.main-menu-v4-option {
   right: -135px; }
-  .opt-wishlist .main-menu-v4-option-item__wishlist-info {
+  .main-menu-v4-option .main-menu-v4-option-item__wishlist-info {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -10068,7 +10071,7 @@ p {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .opt-wishlist .main-menu-v4-option-item__btns {
+  .main-menu-v4-option .main-menu-v4-option-item__btns {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -10083,7 +10086,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 15px; }
-    .opt-wishlist .main-menu-v4-option-item__btns .main-menu-v4-option-item__icon {
+    .main-menu-v4-option .main-menu-v4-option-item__btns .main-menu-v4-option-item__icon {
       margin: 0; }
 
 .show-Main-menu-v4 {
@@ -10140,7 +10143,7 @@ p {
         text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
         font-size: 52px; }
     .home-slider-slide .main-btn {
-      font-size: 42px; }
+      font-size: 24px; }
     .home-slider-slide__info1 {
       min-height: 600px;
       margin: 0 10%;

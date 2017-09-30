@@ -13,8 +13,8 @@
   overflow-y: scroll
   box-shadow: 0px 5px 25px 3px rgba(0,0,0, 1)
   transition: left .4s ease
-  &::-webkit-scrollbar 
-    width: 0px;
+  &::-webkit-scrollbar
+    width: 0px
     background: rgba(255, 255, 255, 0.0)
   .close-main-menu
     position: absolute
@@ -36,8 +36,8 @@
       transition: all .4s ease
     &:hover
       &::after
-        color: $white    
-  
+        color: $white
+
   &__container
     width: 300px
     +container()
@@ -59,7 +59,7 @@
       color: $white
       text-align: center
       font-size: 16px
-      font-family: $berlinFBRegular    
+      font-family: $berlinFBRegular
   &__search-and-nav
     display: flex
     flex-direction: column
@@ -86,27 +86,27 @@
         padding: 12px
         padding-right: 210px
         transition: all .4s ease
-        position: relative  
+        position: relative
       &:hover
         background-color: $accent
-    .afterShow     
+    .afterShow
       color: $white
       &::after
         content: '\f0d7'
         position: absolute
-        right: 15px 
+        right: 15px
         top: 50%
         transform: translateY(-50%)
         font-family: 'FontAwesome'
     .bgForActive
-      background-color: $accent    
+      background-color: $accent
     &-dropdown
       transition: all .2s ease
       background-color: $white
-      border-top: 3px solid $accent  
-      border-bottom: 1px solid $grey  
+      border-top: 3px solid $accent
+      border-bottom: 1px solid $grey
       width: 100%
-      position: absolute 
+      position: absolute
       left: 0
       z-index: 10
       padding: 15px 0 50px
@@ -121,9 +121,9 @@
         flex-wrap: nowrap
         flex-direction: column
       &__Li
-        margin-bottom: 30px  
-      &__column 
-        width: 70%     
+        margin-bottom: 30px
+      &__column
+        width: 70%
         display: flex
         flex-direction: column
         justify-content: space-around
@@ -131,7 +131,7 @@
           color: $dark
           font-family: $berlinFBBold
           font-size: 18px
-        ul 
+        ul
           li
             line-height: 32px
             list-style: disc
@@ -149,7 +149,7 @@
         width: 240px
         height: auto
         background-size: cover
-        background-position: center 
+        background-position: center
         margin-bottom: 15px
   &__features
     width: 100%
@@ -286,7 +286,7 @@
         font-size: 14px
         font-family: $Montserrat-Bold
         margin-bottom: 8px
-      &__qty  
+      &__qty
         font-family: $berlinFBRegular
         font-size: 16px
         span
@@ -316,7 +316,7 @@
         font-family: $berlinFBRegular
     &__btns
       display: flex
-      justify-content: space-between      
+      justify-content: space-between
       margin-top: 15px
   &-bars
     +container()
@@ -331,7 +331,7 @@
     &__icon
       color: $white
 
-//-------- Wishlist modal menu -----------\\      
+//-------- Wishlist modal menu -----------\\
 .main-menu-v4-option__wishlist
   display: flex
   flex-direction: column
@@ -339,13 +339,13 @@
   border-top: 1px solid $grey
   padding: 0
   padding-top: 15px
-.opt-wishlist
+.main-menu-v4-option
   right: -135px
   .main-menu-v4-option-item__wishlist-info
     display: flex
     align-items: center
   .main-menu-v4-option-item__btns
-    width: 100%          
+    width: 100%
     display: flex
     justify-content: space-between
     align-items: center
